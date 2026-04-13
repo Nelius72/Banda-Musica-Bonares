@@ -30,7 +30,7 @@ export default function Hero() {
       {/* Contenido */}
       <div className="relative z-10 max-w-4xl px-6">
 
-        <h1 className="text-3xl md:text-6xl font-semibold tracking-widest text-gold uppercase font-[Cinzel]">
+        <h1 className="text-3xl md:text-6xl font-semibold tracking-widest text-white uppercase font-[Cinzel]">
           Música que trasciende el tiempo
         </h1>
 

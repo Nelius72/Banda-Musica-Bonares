@@ -38,12 +38,12 @@ export default function Stats() {
   }, []);
 
   return (
-    <section className="bg-deepBlack py-20 border-t border-gold/20">
+    <section className="bg-black py-20 border-t border-gold/20">
 
       <div className="max-w-6xl mx-auto px-6 text-center">
 
         {/* Título */}
-        <h2 className="text-2xl md:text-4xl font-semibold text-gold tracking-widest font-[Cinzel]">
+        <h2 className="text-2xl md:text-4xl font-semibold text-white tracking-widest font-[Cinzel]">
           Nuestra trayectoria en cifras
         </h2>
 
