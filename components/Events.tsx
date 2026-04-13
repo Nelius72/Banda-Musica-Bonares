@@ -46,7 +46,7 @@ export default function Events() {
           alt="Eventos Banda"
           fill
           priority
-          className="w-full h-full object-cover opacity-30"
+          className="w-full h-full object-cover opacity-70"
         />
       </div>
 

@@ -11,7 +11,7 @@ export default function Footer() {
 
           {/* LOGO / IDENTIDAD */}
           <div className="flex flex-col items-start gap-4">
-            <h3 className="text-gold font-semibold text-lg">
+            <h3 className="text-amber-400 font-semibold text-lg">
               A.C. Banda de Música de Bonares 1873
             </h3>
 
@@ -22,19 +22,19 @@ export default function Footer() {
 
           {/* CONTACTO RÁPIDO */}
           <div className="space-y-2 text-sm">
-            <h4 className="text-gold font-semibold mb-2">Contacto</h4>
-            <p>Bonares, Huelva (España)</p>
-            <p>contacto@bandabonares.com</p>
-            <p>+34 600 000 000</p>
+            <h4 className="text-amber-400 font-semibold mb-2">Contacto</h4>
+            <p>Pl. del Pilar, 92, 21830 Bonares, Huelva</p>
+            <p>bandabonares@gmail.com</p>
+            <p>+34 609 635 995</p>
           </div>
 
           {/* REDES SOCIALES */}
           <div className="flex flex-col gap-3">
-            <h4 className="text-gold font-semibold mb-2">Síguenos en redes</h4>
+            <h4 className="text-amber-400 font-semibold mb-2">Síguenos en redes</h4>
 
             <div className="flex gap-4 text-amber-200">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/bandabonares?locale=es_ES"
                 target="_blank"
                 className="hover:text-amber-400 transition"
               >
@@ -42,7 +42,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/bandabonaresbmb/"
                 target="_blank"
                 className="hover:text-amber-400 transition"
               >
@@ -57,7 +57,7 @@ export default function Footer() {
                 <FaSpotify size={40} />
               </a>
               <a
-                href="https://youtube.com"
+                href="https://www.youtube.com/@bandamusicabonares9249"
                 target="_blank"
                 className="hover:text-amber-400 transition"
               >
@@ -68,14 +68,16 @@ export default function Footer() {
         </div>
 
         {/* SEPARADOR */}
-        <div className="border-t border-gold/10 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-amber-200/60">
+        <div className="border-t border-gold/10 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-amber-400">
 
           <p>
             © {new Date().getFullYear()} Banda de Música de Bonares . 
           </p>
             <p>Todos los Derechos Reservados</p>
           <p>
-            Diseño y desarrollo: Cornelio Romero Borrero
+            Design & Dev: <a href="https://portfolio-personal-crb-psi-flame.vercel.app" target="_blank" className="hover:text-white transition">
+              Cornelio Romero Borrero
+            </a>
           </p>
 
         </div>

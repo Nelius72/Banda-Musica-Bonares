@@ -21,7 +21,7 @@ export default function Hero() {
         alt="Banda de Música"
         fill
         priority
-        className="object-cover opacity-40"
+        className="object-cover opacity-70"
       />
 
       {/* Overlay */}

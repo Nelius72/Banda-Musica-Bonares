@@ -89,9 +89,17 @@ export default function Navbar() {
             Eventos
           </button>
 
-          <Link href="#" className="hover:text-gold transition">
+          <button
+            onClick={() => {
+              document.getElementById("contacto")?.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }}
+            className="block px-6 py-3 text-sm text-gold hover:bg-gold hover:text-white rounded-md transition"
+          >
             Contacto
-          </Link>
+          </button>
         </div>
 
         {/* HAMBURGER */}

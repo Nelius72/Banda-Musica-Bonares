@@ -21,8 +21,8 @@ const cinzel = Cinzel({
 });
 
 export const metadata: Metadata = {
-  title: "Banda Bonares",
-  description: "Página principal de Banda Bonares",
+  title: "Banda Música Bonares",
+  description: "Página principal de Banda Música Bonares",
 };
 
 export default function RootLayout({

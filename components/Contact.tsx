@@ -1,12 +1,11 @@
 "use client";
-
+import { FaFacebook, FaInstagram, FaSpotify, FaYoutube } from "react-icons/fa";
 import Image from "next/image";
 
 export default function Contact() {
   return (
     <section id="contacto" className="bg-black py-20 border-t border-gold/20">
       <div className="max-w-6xl mx-auto px-6">
-
         {/* TÍTULO */}
         <h2 className="text-3xl md:text-4xl font-semibold text-white text-center tracking-widest font-[Cinzel]">
           Contacto
@@ -18,7 +17,6 @@ export default function Contact() {
 
         {/* GRID PRINCIPAL */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-
           {/* LOGO GRANDE */}
           <div className="border border-amber-300 rounded-md p-6 flex items-center justify-center bg-[#0a0a0a]">
             <Image
@@ -32,27 +30,61 @@ export default function Contact() {
 
           {/* INFO + FORM */}
           <div className="border border-amber-300 rounded-md p-6 bg-[#0a0a0a] flex flex-col justify-between">
-            
             {/* INFO */}
             <div className="space-y-4 text-amber-200">
               <div>
                 <h3 className="text-amber-400 font-semibold">Dirección</h3>
-                <p>Bonares, Huelva (España)</p>
+                <p>Pl. del Pilar, 92, 21830 Bonares, Huelva</p>
               </div>
 
               <div>
                 <h3 className="text-amber-400 font-semibold">Email</h3>
-                <p>contacto@bandabonares.com</p>
+                <p>bandabonares@gmail.com</p>
               </div>
 
               <div>
                 <h3 className="text-amber-400 font-semibold">Teléfono</h3>
-                <p>+34 600 000 000</p>
+                <p>+34 609 635 995</p>
               </div>
 
               <div>
-                <h3 className="text-amber-400 font-semibold">Redes sociales</h3>
-                <p>Instagram · Facebook · YouTube</p>
+                <h3 className="text-amber-400 font-semibold mb-2">
+                  Redes sociales
+                </h3>
+
+                <div className="flex items-center gap-4">
+                  <a
+                    href="https://www.facebook.com/bandabonares?locale=es_ES"
+                    target="_blank"
+                    className="hover:text-amber-400 transition"
+                  >
+                    <FaFacebook size={30} />
+                  </a>
+
+                  <a
+                    href="https://www.instagram.com/bandabonaresbmb/"
+                    target="_blank"
+                    className="hover:text-amber-400 transition"
+                  >
+                    <FaInstagram size={30} />
+                  </a>
+
+                  <a
+                    href="https://spotify.com"
+                    target="_blank"
+                    className="hover:text-amber-400 transition"
+                  >
+                    <FaSpotify size={30} />
+                  </a>
+
+                  <a
+                    href="https://www.youtube.com/@bandamusicabonares9249"
+                    target="_blank"
+                    className="hover:text-amber-400 transition"
+                  >
+                    <FaYoutube size={30} />
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -92,7 +124,6 @@ export default function Contact() {
               allowFullScreen
             />
           </div>
-
         </div>
       </div>
     </section>
