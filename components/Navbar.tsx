@@ -16,7 +16,7 @@ export default function Navbar() {
   }, [open]);
 
   return (
-    <nav className="sticky top-0 z-50 bg-deepBlack/90 backdrop-blur-md text-amber-400 border-b border-gold shadow-md">
+    <nav className="sticky top-0 z-50 bg-black backdrop-blur-md text-amber-400 border-b border-gold shadow-md">
 
       {/* HEADER */}
       <div className="relative flex flex-col md:flex-row md:items-center h-auto md:h-24 px-4 py-3 md:py-0">

@@ -57,7 +57,7 @@ export default function Stats() {
           {statsData.map((stat, i) => (
             <div key={i} className="text-center">
 
-              <div className="text-3xl md:text-5xl font-bold text-gold">
+              <div className="text-3xl md:text-5xl font-bold text-white">
                 {Math.floor(counts[i])}
                 {stat.suffix}
               </div>

@@ -27,7 +27,7 @@ export default function HistoryPreview() {
           {/* TEXTO */}
           <div className="md:col-span-2">
 
-            <h2 className="text-2xl md:text-4xl font-semibold text-gold tracking-widest font-[Cinzel]">
+            <h2 className="text-2xl md:text-4xl font-semibold text-white tracking-widest font-[Cinzel]">
               Nuestra Historia
             </h2>
 
@@ -47,7 +47,7 @@ export default function HistoryPreview() {
             <div className="mt-8">
               <Link
                 href="/historia"
-                className="inline-block px-6 py-3 border border-gold text-gold hover:bg-gold hover:text-amber-200 transition rounded-md tracking-wide"
+                className="inline-block px-6 py-3 border border-amber-400 text-white hover:bg-gold hover:text-amber-200 transition rounded-md tracking-wide"
               >
                 Ver historia completa
               </Link>

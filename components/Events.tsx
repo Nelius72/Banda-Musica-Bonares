@@ -57,7 +57,7 @@ export default function Events() {
       <div className="relative z-10 max-w-7xl mx-auto px-6">
 
         {/* Título */}
-        <h2 className="text-2xl md:text-4xl font-semibold text-gold text-center tracking-widest font-[Cinzel]">
+        <h2 className="text-2xl md:text-4xl font-semibold text-white text-center tracking-widest font-[Cinzel]">
           Próximos Eventos
         </h2>
 
@@ -75,7 +75,7 @@ export default function Events() {
               hover:border-gold transition flex flex-col justify-between backdrop-blur-sm"
             >
 
-              <div className="text-gold text-2xl font-bold leading-none">
+              <div className="text-white text-2xl font-bold leading-none">
                 {new Date(event.date).getDate()}
               </div>
 
@@ -86,7 +86,7 @@ export default function Events() {
                 })}
               </div>
 
-              <h3 className="mt-2 text-sm font-semibold text-gold leading-tight">
+              <h3 className="mt-2 text-sm font-semibold text-white leading-tight">
                 {event.title}
               </h3>
 
