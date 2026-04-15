@@ -98,6 +98,7 @@ export default function Contact() {
               <input
                 type="email"
                 placeholder="Email"
+                suppressHydrationWarning
                 className="w-full p-3 bg-black border border-amber-300 rounded-md text-amber-200"
               />
               <textarea

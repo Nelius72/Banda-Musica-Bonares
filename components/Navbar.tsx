@@ -37,8 +37,8 @@ export default function Navbar() {
             <Image
               src="/logo.png"
               alt="Logo Banda"
-              width={80}
-              height={80}
+              width={70}
+              height={70}
               className="object-contain"
               priority
             />
@@ -65,9 +65,8 @@ export default function Navbar() {
             >
               Historia
             </button>
-            <DropdownItem text="Junta Directiva" />
-            <DropdownItem text="Componentes" />
-            <DropdownItem text="Premios" />
+            <DropdownItem text="Miembros" />
+            <DropdownItem text="Premios y Reconocimientos" />
             <DropdownItem text="Compositores" />
           </Dropdown>
 
@@ -121,7 +120,7 @@ export default function Navbar() {
             className="md:hidden px-6 pb-6 pt-2 bg-deepBlack border-t border-gold/20 space-y-6"
           >
 
-            <MobileSection title="About Us">
+            <MobileSection title="Sobre Nosotros">
               <MobileLink
                 text="Historia"
                 onClick={() => {
@@ -132,9 +131,8 @@ export default function Navbar() {
                   });
                 }}
               />
-              <MobileLink text="Junta Directiva" onClick={handleClose} />
-              <MobileLink text="Componentes" onClick={handleClose} />
-              <MobileLink text="Premios" onClick={handleClose} />
+              <MobileLink text="Miembros" onClick={handleClose} />
+              <MobileLink text="Premios y Reconocimientos" onClick={handleClose} />
               <MobileLink text="Compositores" onClick={handleClose} />
             </MobileSection>
 
@@ -155,7 +153,14 @@ export default function Navbar() {
               }}
             />
 
-            <MobileLink text="Contacto" onClick={handleClose} />
+            <MobileLink text="Contacto" onClick={() => {
+              handleClose();
+              document.getElementById("contacto")?.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+             }} 
+            />
           </motion.div>
         )}
       </AnimatePresence>
