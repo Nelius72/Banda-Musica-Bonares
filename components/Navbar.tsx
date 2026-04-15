@@ -66,7 +66,7 @@ export default function Navbar() {
                   block: "start",
                 });
               }}
-              className="block px-6 py-3 text-sm text-gold hover:bg-gold hover:text-white rounded-md transition"
+              className="block px-6 py-3 text-sm text-gold hover:bg-gold hover:text-white  transition"
             >
               Historia
             </button>
@@ -75,7 +75,13 @@ export default function Navbar() {
             <DropdownItem text="Compositores" />
           </Dropdown>
 
-          <Dropdown
+          <button>
+            <Link href="/repertorio" className="hover:text-white transition">
+              Repertorio
+            </Link>
+          </button>
+
+          {/* <Dropdown
             title={
               <Link href="/repertorio" className="hover:text-gold transition">
                 Repertorio
@@ -84,14 +90,18 @@ export default function Navbar() {
             <DropdownItem text="Marchas Procesionales" />
             <DropdownItem text="Pasodobles" />
             <DropdownItem text="Obras Sinfónicas" />
-          </Dropdown>
+          </Dropdown>*/}
 
           <button
             onClick={() => {
-              document.getElementById("eventos")?.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-              });
+              if (pathname === "/") {
+                document.getElementById("eventos")?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              } else {
+                router.push("/#eventos");
+              }
             }}
             className="block px-6 py-3 text-sm text-gold hover:bg-gold hover:text-white rounded-md transition"
           >
@@ -100,10 +110,14 @@ export default function Navbar() {
 
           <button
             onClick={() => {
-              document.getElementById("contacto")?.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-              });
+              if (pathname === "/") {
+                document.getElementById("contacto")?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              } else {
+                router.push("/#contacto");
+              }
             }}
             className="block px-6 py-3 text-sm text-gold hover:bg-gold hover:text-white rounded-md transition"
           >
@@ -148,32 +162,47 @@ export default function Navbar() {
               <MobileLink text="Compositores" onClick={handleClose} />
             </MobileSection>
 
-            <MobileSection title="Repertorio">
+            {/*<MobileSection title="Repertorio">
               <MobileLink text="Marchas Procesionales" onClick={handleClose} />
               <MobileLink text="Pasodobles" onClick={handleClose} />
               <MobileLink text="Obras Sinfónicas" onClick={handleClose} />
-            </MobileSection>
+            </MobileSection>*/}
+            <MobileLink
+              text="Repertorio"
+              onClick={() => {
+                router.push("/repertorio");
+                  handleClose();
+              }}
+            />
 
             <MobileLink
               text="Eventos"
               onClick={() => {
-                handleClose();
+              if (pathname === "/") {
                 document.getElementById("eventos")?.scrollIntoView({
                   behavior: "smooth",
                   block: "start",
                 });
-              }}
+              } else {
+                router.push("/#eventos");
+              }
+               handleClose();
+            }}
             />
 
             <MobileLink
               text="Contacto"
               onClick={() => {
-                handleClose();
+              if (pathname === "/") {
                 document.getElementById("contacto")?.scrollIntoView({
                   behavior: "smooth",
                   block: "start",
                 });
-              }}
+              } else {
+                router.push("/#contacto");
+              }
+               handleClose();
+            }}
             />
           </motion.div>
         )}
@@ -232,12 +261,11 @@ function MobileSection({
 
 function MobileLink({ text, onClick }: { text: string; onClick: () => void }) {
   return (
-    <Link
-      href="#"
+    <button
       onClick={onClick}
-      className="block text-amber-300 hover:text-gold transition"
+      className="block text-amber-300 hover:text-gold transition text-left w-full"
     >
       {text}
-    </Link>
+    </button>
   );
 }

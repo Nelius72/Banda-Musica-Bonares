@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-
+import Link from "next/link";
 
 export default function Hero() {
   const scrollToEvents = () => {
@@ -50,7 +50,9 @@ export default function Hero() {
 
           {/* OTRO BOTÓN (puedes dejarlo o cambiarlo luego) */}
           <button className="px-6 py-3 border border-gold text-amber-400 hover:bg-gold hover:text-white transition rounded-md tracking-wide">
-            Nuestro Repertorio
+            <Link href="/repertorio">
+              Nuestro Repertorio
+            </Link>
           </button>
 
         </div>
