@@ -3,7 +3,7 @@ import Stats from "@/components/Stats";
 import Events from "@/components/Events";
 import HistoryPreview from "@/components/HistoryPrev";
 import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+
 
 export default function Page() {
   return (
@@ -13,7 +13,7 @@ export default function Page() {
     <Events />
     <HistoryPreview />
     <Contact />
-    <Footer />
+    
     </>
   );
 }

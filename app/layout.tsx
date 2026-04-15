@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Cinzel } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,6 +20,12 @@ const cinzel = Cinzel({
   variable: "--font-cinzel",
   subsets: ["latin"],
   weight: ["400", "600", "700"]
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-playfair",
 });
 
 export const metadata: Metadata = {
@@ -38,6 +46,7 @@ export default function RootLayout({
       <body className={cinzel.className + " min-h-full bg-slate-950 text-slate-100 font-sans"}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

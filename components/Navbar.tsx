@@ -1,15 +1,20 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   const handleClose = () => setOpen(false);
+
+  const pathname = usePathname();
+
+  const router = useRouter();
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "auto";
@@ -17,20 +22,21 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 bg-black backdrop-blur-md text-amber-400 border-b border-gold shadow-md">
-
       {/* HEADER */}
       <div className="relative flex flex-col md:flex-row md:items-center h-auto md:h-24 px-4 py-3 md:py-0">
-
         {/* LEFT - LOGO + TITLE */}
         <div className="flex items-center justify-start gap-4 md:flex-1">
-
           {/* LOGO */}
           <button
             onClick={() => {
-              document.getElementById("inicio")?.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-              });
+              if (pathname === "/") {
+                document.getElementById("inicio")?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              } else {
+                router.push("/");
+              }
             }}
             className="flex items-center"
           >
@@ -52,7 +58,6 @@ export default function Navbar() {
 
         {/* RIGHT - DESKTOP MENU */}
         <div className="hidden md:flex items-center gap-12 text-sm tracking-wide md:ml-auto">
-
           <Dropdown title="Sobre Nosotros">
             <button
               onClick={() => {
@@ -70,7 +75,12 @@ export default function Navbar() {
             <DropdownItem text="Compositores" />
           </Dropdown>
 
-          <Dropdown title="Repertorio">
+          <Dropdown
+            title={
+              <Link href="/repertorio" className="hover:text-gold transition">
+                Repertorio
+              </Link>
+            }>
             <DropdownItem text="Marchas Procesionales" />
             <DropdownItem text="Pasodobles" />
             <DropdownItem text="Obras Sinfónicas" />
@@ -119,7 +129,6 @@ export default function Navbar() {
             exit={{ opacity: 0, y: -10 }}
             className="md:hidden px-6 pb-6 pt-2 bg-deepBlack border-t border-gold/20 space-y-6"
           >
-
             <MobileSection title="Sobre Nosotros">
               <MobileLink
                 text="Historia"
@@ -132,7 +141,10 @@ export default function Navbar() {
                 }}
               />
               <MobileLink text="Miembros" onClick={handleClose} />
-              <MobileLink text="Premios y Reconocimientos" onClick={handleClose} />
+              <MobileLink
+                text="Premios y Reconocimientos"
+                onClick={handleClose}
+              />
               <MobileLink text="Compositores" onClick={handleClose} />
             </MobileSection>
 
@@ -153,13 +165,15 @@ export default function Navbar() {
               }}
             />
 
-            <MobileLink text="Contacto" onClick={() => {
-              handleClose();
-              document.getElementById("contacto")?.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-              });
-             }} 
+            <MobileLink
+              text="Contacto"
+              onClick={() => {
+                handleClose();
+                document.getElementById("contacto")?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }}
             />
           </motion.div>
         )}
@@ -174,7 +188,7 @@ function Dropdown({
   title,
   children,
 }: {
-  title: string;
+  title: React.ReactNode;
   children: React.ReactNode;
 }) {
   return (
@@ -216,13 +230,7 @@ function MobileSection({
   );
 }
 
-function MobileLink({
-  text,
-  onClick,
-}: {
-  text: string;
-  onClick: () => void;
-}) {
+function MobileLink({ text, onClick }: { text: string; onClick: () => void }) {
   return (
     <Link
       href="#"
