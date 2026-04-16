@@ -18,13 +18,12 @@ export default function Repertorio() {
 
   const filtrar = (lista: Obra[]) =>
     lista.filter((obra) =>
-      obra.titulo.toLowerCase().includes(busqueda.toLowerCase())
+      obra.titulo.toLowerCase().includes(busqueda.toLowerCase()),
     );
 
   return (
     <section className="min-h-screen bg-black text-amber-200 py-20 px-6">
       <div className="max-w-3xl mx-auto">
-
         <h1 className="text-4xl md:text-5xl text-center text-amber-400 font-[Cinzel] tracking-widest">
           Repertorio
         </h1>
@@ -43,7 +42,6 @@ export default function Repertorio() {
 
         {/* ACORDEONES */}
         <div className="mt-12 space-y-6">
-
           <Accordion
             titulo="Marchas Procesionales"
             count={marchasProcesionales.length}
@@ -67,7 +65,6 @@ export default function Repertorio() {
             onClick={() => toggle("sinfonica")}
             obras={filtrar(obrasSinfonicas)}
           />
-
         </div>
       </div>
     </section>
@@ -91,7 +88,6 @@ function Accordion({
 }) {
   return (
     <div className="border border-gold/20 rounded-md overflow-hidden">
-
       {/* HEADER */}
       <button
         onClick={onClick}
@@ -101,9 +97,7 @@ function Accordion({
       >
         <span className="flex items-center gap-2">
           {titulo}
-          <span className="text-xs text-amber-200/60">
-            ({count})
-          </span>
+          <span className="text-xs text-amber-200/60">({count})</span>
         </span>
 
         <span className="text-xl">{abierto ? "−" : "+"}</span>
@@ -127,10 +121,10 @@ function Accordion({
                 hover:text-gold transition"
               >
                 <span className="normal-case font-[Playfair_Display]">
-  {obra.titulo}
-</span>
-                
-                <span>▶</span>
+                  {obra.titulo}
+                </span>
+
+                <span className="hover:text-white  transition">▶</span>
               </a>
             ))}
           </div>
