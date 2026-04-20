@@ -61,16 +61,20 @@ export default function Navbar() {
           <Dropdown title="Sobre Nosotros">
             <button
               onClick={() => {
-                document.getElementById("historia")?.scrollIntoView({
-                  behavior: "smooth",
-                  block: "start",
-                });
+                if(pathname === "/") {
+                  document.getElementById("historia")?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                } else {
+                  router.push("/historia");
+                }
               }}
               className="block px-6 py-3 text-sm text-gold hover:bg-gold hover:text-white  transition"
             >
               Historia
             </button>
-            <DropdownItem text="Miembros" />
+            <DropdownItem text="Miembros" href="/miembros" />
             <DropdownItem text="Premios y Reconocimientos" />
             
           </Dropdown>
@@ -147,14 +151,18 @@ export default function Navbar() {
               <MobileLink
                 text="Historia"
                 onClick={() => {
-                  handleClose();
-                  document.getElementById("historia")?.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                  });
-                }}
+              if (pathname === "/") {
+                document.getElementById("historia")?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              } else {
+                router.push("/historia");
+              }
+               handleClose();
+            }}
               />
-              <MobileLink text="Miembros" onClick={handleClose} />
+              <MobileLink text="Miembros" href="/miembros" onClick={handleClose} />
               <MobileLink
                 text="Premios y Reconocimientos"
                 onClick={handleClose}
@@ -231,10 +239,10 @@ function Dropdown({
   );
 }
 
-function DropdownItem({ text }: { text: string }) {
+function DropdownItem({ text, href }: { text: string; href?: string }) {
   return (
     <Link
-      href="#"
+      href={href || "#"}
       className="block px-6 py-3 text-sm text-gold hover:bg-gold hover:text-white rounded-md transition"
     >
       {text}
@@ -259,7 +267,18 @@ function MobileSection({
   );
 }
 
-function MobileLink({ text, onClick }: { text: string; onClick: () => void }) {
+function MobileLink({ text, onClick, href }: { text: string; onClick: () => void; href?: string }) {
+  if (href) {
+    return (
+      <Link
+        href={href}
+        onClick={onClick}
+        className="block text-amber-300 hover:text-gold transition text-left w-full"
+      >
+        {text}
+      </Link>
+    );
+  }
   return (
     <button
       onClick={onClick}
