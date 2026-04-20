@@ -28,11 +28,11 @@ const secciones: Seccion[] = [
   {
     nombre: "Clarinetes",
     miembros: [
-      { nombre: "Joaquín Pérez",  foto: "/images/miembros/maria-garcia.jpg" },
+      { nombre: "Joaquín Pérez", instrumento: "Clarinetes", foto: "/images/miembros/maria-garcia.jpg" },
       { nombre: "Juan Antonio Coronel", instrumento: "", foto: "/miembros/" },
       { nombre: "María León", instrumento: "", foto: "/images/miembros/ana-rodriguez.jpg" },
       { nombre: "Paola Domínguez", instrumento: "", foto: "/images/miembros/pedro-sanchez.jpg" },
-      { nombre: "Botones",  foto: "/images/miembros/maria-garcia.jpg" },
+      { nombre: "Botones", instrumento: "Clarinete", foto: "/images/miembros/maria-garcia.jpg" },
       { nombre: "Martín Bautista", instrumento: "", foto: "/miembros/" },
       { nombre: "Cristina García", instrumento: "", foto: "/images/miembros/ana-rodriguez.jpg" },
       { nombre: "Manoli Vega", instrumento: "", foto: "/images/miembros/pedro-sanchez.jpg" },
