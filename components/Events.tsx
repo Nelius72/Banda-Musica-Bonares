@@ -7,19 +7,22 @@ const events = [
     title: "Cruz Chica",
     date: "2026-05-01",
     location: "Bonares",
+    mapUrl: "https://maps.app.goo.gl/9MscxpabdgSNrYpA8",
     description: "Tradicional procesión de las cruces chicas.",
   },
   {
     title: "Verbena Romerito",
     date: "2026-05-07",
     location: "Bonares",
-    description: "Acompañamiento musical en la tradicional procesión de la verbena.",
+    description:
+      "Acompañamiento musical en la tradicional procesión de la verbena.",
   },
   {
     title: "Romerito",
     date: "2026-05-09",
     location: "Bonares",
-    description: "Acompañamiento musical en el tradicional recorrido del romerito.",
+    description:
+      "Acompañamiento musical en el tradicional recorrido del romerito.",
   },
   {
     title: "Cruces de Mayo",
@@ -37,8 +40,10 @@ const events = [
 
 export default function Events() {
   return (
-    <section id="eventos" className="relative py-20 border-t border-gold/20 overflow-hidden">
-
+    <section
+      id="eventos"
+      className="relative py-20 border-t border-gold/20 overflow-hidden"
+    >
       {/* Fondo */}
       <div className="absolute inset-0">
         <Image
@@ -55,7 +60,6 @@ export default function Events() {
 
       {/* Contenido */}
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-
         {/* Título */}
         <h2 className="text-2xl md:text-4xl font-semibold text-white text-center tracking-widest font-[Cinzel]">
           Próximos Eventos
@@ -67,13 +71,17 @@ export default function Events() {
 
         {/* Grid */}
         <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-
           {events.map((event, index) => (
             <div
               key={index}
               className="border border-gold/30 rounded-md p-3 bg-[#0a0a0a]/80
               hover:border-gold transition flex flex-col justify-between backdrop-blur-sm"
             >
+              <div className="text-white text-sm uppercase tracking-widest">
+                {new Date(event.date).toLocaleDateString("es-ES", {
+                  weekday: "long",
+                })}
+              </div>
 
               <div className="text-white text-2xl font-bold leading-none">
                 {new Date(event.date).getDate()}
@@ -81,8 +89,8 @@ export default function Events() {
 
               <div className="text-amber-200 text-[10px] uppercase tracking-widest">
                 {new Date(event.date).toLocaleString("es-ES", {
-                  month: "short",
-                  year: "2-digit",
+                  month: "long",
+                  year: "numeric",
                 })}
               </div>
 
@@ -95,12 +103,18 @@ export default function Events() {
               </p>
 
               <p className="mt-2 text-[10px] text-amber-300">
-                📍 {event.location}
+                📍{" "}
+                <a
+                  href={event.mapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  {event.location}
+                </a>
               </p>
-
             </div>
           ))}
-
         </div>
       </div>
     </section>

@@ -12,12 +12,14 @@ interface Miembro {
 
 interface Seccion {
   nombre: string;
+  mostrarInstrumento?: boolean;
   miembros: Miembro[];
 }
 
 const secciones: Seccion[] = [
   {
     nombre: "Dirección y Junta Directiva",
+    mostrarInstrumento: false,
     miembros: [
       { nombre: "Antonio León", instrumento: "Tuba", rol: "Director", foto: "/miembros/director.png" },
       { nombre: "Diego Coronel", instrumento: "", rol: "Presidente", foto: "/miembros/presidente.png" },
@@ -27,89 +29,95 @@ const secciones: Seccion[] = [
   },
   {
     nombre: "Clarinetes",
+    mostrarInstrumento: true,
     miembros: [
-      { nombre: "Joaquín Pérez", instrumento: "Clarinetes", foto: "/images/miembros/maria-garcia.jpg" },
-      { nombre: "Juan Antonio Coronel", instrumento: "", foto: "/miembros/" },
-      { nombre: "María León", instrumento: "", foto: "/images/miembros/ana-rodriguez.jpg" },
-      { nombre: "Paola Domínguez", instrumento: "", foto: "/images/miembros/pedro-sanchez.jpg" },
-      { nombre: "Botones", instrumento: "Clarinete", foto: "/images/miembros/maria-garcia.jpg" },
-      { nombre: "Martín Bautista", instrumento: "", foto: "/miembros/" },
-      { nombre: "Cristina García", instrumento: "", foto: "/images/miembros/ana-rodriguez.jpg" },
-      { nombre: "Manoli Vega", instrumento: "", foto: "/images/miembros/pedro-sanchez.jpg" },
+      { nombre: "Joaquín Pérez", instrumento: "Clarinete Ppal.", foto: "/miembros/usuario.jpg" },
+      { nombre: "Juan Antonio Coronel", instrumento: "Clarinete 1º", foto: "/miembros/usuario.jpg" },
+      { nombre: "María León", instrumento: "Clarinete 1º", foto: "/miembros/usuario.jpg" },
+      { nombre: "Paola Rodríguez", instrumento: "Clarinete 2º", foto: "/miembros/usuario.jpg" },
+      { nombre: "Antonio García", instrumento: "Clarinete 2º", foto: "/miembros/usuario.jpg" },
+      { nombre: "Martín Bautista", instrumento: "Clarinete 3º", foto: "/miembros/usuario.jpg" },
+      { nombre: "Cristina García", instrumento: "Clarinete 3º", foto: "/miembros/usuario.jpg" },
+      { nombre: "Manoli Vega", instrumento: "Clarinete 3º", foto: "/miembros/usuario.jpg" },
     ]
   },
   {
     nombre: "Flautas",
+    mostrarInstrumento: true,
     miembros: [
-      { nombre: "Luz María Díaz", instrumento: "", foto: "/images/miembros/laura-martin.jpg" },
-      { nombre: "Elena Martín", instrumento: "", foto: "/images/miembros/miguel-fernandez.jpg" },
-      { nombre: "Patricia", instrumento: "", foto: "/images/miembros/sofia-ruiz.jpg" },
-     
+      { nombre: "Luz María Díaz", instrumento: "Flauta Ppal. / Flautín", foto: "/miembros/usuario.jpg" },
+      { nombre: "Elena Martín", instrumento: "Flauta 1º", foto: "/miembros/usuario.jpg" },
+      { nombre: "Patricia Salvador", instrumento: "Flauta 2º", foto: "/miembros/usuario.jpg" },
     ]
   },
   {
     nombre: "Trompetas, Cornetas y Fliscornos",
+    mostrarInstrumento: true,
     miembros: [
-      { nombre: "Álvaro Vega", instrumento: "", foto: "/images/miembros/carlos-rodriguez.jpg" },
-      { nombre: "Rocío Pichardo", instrumento: "", foto: "/images/miembros/isabel-fernandez.jpg" },
-      { nombre: "Cristobal Camacho", instrumento: "", foto: "/images/miembros/miguel-torres.jpg" },
-      { nombre: "Pepe López", instrumento: "", foto: "/images/miembros/laura-martin.jpg" },
-      { nombre: "Juan Antonio Lucena", instrumento: "", foto: "/images/miembros/laura-martin.jpg" },
-      { nombre: "Juan Antonio Regidor", instrumento: "", foto: "/images/miembros/miguel-fernandez.jpg" },
-      { nombre: "Jose Antonio Raya", instrumento: "", foto: "/images/miembros/sofia-ruiz.jpg" },
-      { nombre: "J. Antonio Coronel", instrumento: "", foto: "/images/miembros/carlos-rodriguez.jpg" },
+      { nombre: "Álvaro Vega", instrumento: "Trompeta", foto: "/miembros/usuario.jpg" },
+      { nombre: "Rocío Pichardo", instrumento: "Trompeta", foto: "/miembros/usuario.jpg" },
+      { nombre: "Cristobal Camacho", instrumento: "Corneta", foto: "/miembros/usuario.jpg" },
+      { nombre: "Pepe López", instrumento: "Trompeta / Corneta", foto: "/miembros/usuario.jpg" },
+      { nombre: "Juan Antonio Lucena", instrumento: "Trompeta", foto: "/miembros/usuario.jpg" },
+      { nombre: "Juan Antonio Regidor", instrumento: "Trompeta", foto: "/miembros/usuario.jpg" },
+      { nombre: "Jose Antonio Raya", instrumento: "Trompeta", foto: "/miembros/usuario.jpg" },
+      { nombre: "J. Antonio Coronel", instrumento: "Fliscorno", foto: "/miembros/usuario.jpg" },
     ]
   },
   {
     nombre: "Trompas",
+    mostrarInstrumento: false,
     miembros: [
-      { nombre: "Sergio Martín", instrumento: "Platillos", foto: "/images/miembros/carmen-jimenez.jpg" }
+      { nombre: "Sergio Martín", instrumento: "Platillos", foto: "/miembros/usuario.jpg" }
     ]
   },
   {
     nombre: "Saxofones",
+    mostrarInstrumento: true,
     miembros: [
-      { nombre: "Diego Coronel", instrumento: "", foto: "/images/miembros/carlos-rodriguez.jpg" },
-      { nombre: "Ángela León", instrumento: "", foto: "/images/miembros/isabel-fernandez.jpg" },
-      { nombre: "Marco García", instrumento: "", foto: "/images/miembros/miguel-torres.jpg" },
-      { nombre: "Jesús Yáñez", instrumento: "", foto: "/images/miembros/laura-martin.jpg" },
-      { nombre: "Lola", instrumento: "", foto: "/images/miembros/miguel-fernandez.jpg" },
-      { nombre: "Salomé Mota", instrumento: "", foto: "/images/miembros/sofia-ruiz.jpg" },
-      { nombre: "Pedro Polaco", instrumento: "", foto: "/images/miembros/carlos-rodriguez.jpg" },
-      { nombre: "Leonardo Pérez", instrumento: "", foto: "/images/miembros/laura-martin.jpg" },
-
+      { nombre: "Diego Coronel", instrumento: "", foto: "/miembros/usuario.jpg" },
+      { nombre: "Ángela León", instrumento: "", foto: "/miembros/usuario.jpg" },
+      { nombre: "Marco García", instrumento: "", foto: "/miembros/usuario.jpg" },
+      { nombre: "Jesús Yáñez", instrumento: "Tenor", foto: "/miembros/usuario.jpg" },
+      { nombre: "Lola", instrumento: "", foto: "/miembros/usuario.jpg" },
+      { nombre: "Salomé Mota", instrumento: "", foto: "/miembros/usuario.jpg" },
+      { nombre: "Pedro Velo", instrumento: "", foto: "/miembros/usuario.jpg" },
+      { nombre: "Leonardo Pérez", instrumento: "Barítono", foto: "/miembros/usuario.jpg" },
     ]
   },
   {
     nombre: "Fagot",
+    mostrarInstrumento: false,
     miembros: [
-      { nombre: "Nani Pavón", instrumento: "", foto: "/images/miembros/carlos-rodriguez.jpg" }
+      { nombre: "Nani Pavón", instrumento: "", foto: "/miembros/usuario.jpg" }
     ]
   },
-  { nombre: "Bombardinos, Trombones y Tubas",
+  {
+    nombre: "Bombardinos, Trombones y Tubas",
+    mostrarInstrumento: true,
     miembros: [
-      { nombre: "Leonardo García", instrumento: "", foto: "/images/miembros/carlos-rodriguez.jpg" },
-      { nombre: "Manuel Niño", instrumento: "", foto: "/images/miembros/isabel-fernandez.jpg" },
-      { nombre: "Juan", instrumento: "", foto: "/images/miembros/miguel-torres.jpg" },
-      { nombre: "Manuel Limón", instrumento: "", foto: "/images/miembros/laura-martin.jpg" },
-      { nombre: "Cornelio Romero", instrumento: "", foto: "/images/miembros/miguel-fernandez.jpg" },
-      { nombre: "Luís Galán", instrumento: "", foto: "/images/miembros/sofia-ruiz.jpg" },
-      { nombre: "Ezequiel 'La Bestia' Márquez", instrumento: "", foto: "/images/miembros/carlos-rodriguez.jpg" },
-       
+      { nombre: "Leonardo García", instrumento: "Trombón", foto: "/miembros/usuario.jpg" },
+      { nombre: "Manuel Cintado", instrumento: "Trombón", foto: "/miembros/usuario.jpg" },
+      { nombre: "Juan", instrumento: "Trombón", foto: "/miembros/usuario.jpg" },
+      { nombre: "Manuel Limón", instrumento: "Trombón", foto: "/miembros/usuario.jpg" },
+      { nombre: "Cornelio Romero", instrumento: "Tuba", foto: "/miembros/usuario.jpg" },
+      { nombre: "Luís Galán", instrumento: "Tuba", foto: "/miembros/usuario.jpg" },
+      { nombre: "Ezequiel 'La Bestia' Márquez", instrumento: "Tuba", foto: "/miembros/usuario.jpg" },
     ]
-    },
-    { nombre: "Percusión",
+  },
+  {
+    nombre: "Percusión",
+    mostrarInstrumento: false,
     miembros: [
-      { nombre: "José Coronel", instrumento: "", foto: "/images/miembros/carlos-rodriguez.jpg" },
-      { nombre: "Luis Rodríguez", instrumento: "", foto: "/images/miembros/isabel-fernandez.jpg" },
-      { nombre: "Manuel Jesús Rodríguez", instrumento: "", foto: "/images/miembros/miguel-torres.jpg" },
-      { nombre: "Jose Manuel Pérez", instrumento: "", foto: "/images/miembros/laura-martin.jpg" },
-      { nombre: "Javier Bizquillo", instrumento: "", foto: "/images/miembros/miguel-fernandez.jpg" },
-      { nombre: "Jorgen Bautista", instrumento: "", foto: "/images/miembros/sofia-ruiz.jpg" },
-      { nombre: "Aurel Martín", instrumento: "", foto: "/images/miembros/carlos-rodriguez.jpg" },
-       
+      { nombre: "José Coronel", instrumento: "", foto: "/miembros/usuario.jpg" },
+      { nombre: "Luis Rodríguez", instrumento: "", foto: "/miembros/usuario.jpg" },
+      { nombre: "Manuel Jesús Rodríguez", instrumento: "", foto: "/miembros/usuario.jpg" },
+      { nombre: "Jose Manuel Pérez", instrumento: "", foto: "/miembros/usuario.jpg" },
+      { nombre: "Javier Velo", instrumento: "", foto: "/miembros/usuario.jpg" },
+      { nombre: "Jorgen Bautista", instrumento: "", foto: "/miembros/usuario.jpg" },
+      { nombre: "Aurel Martín", instrumento: "", foto: "/miembros/usuario.jpg" },
     ]
-    },
+  },
 ];
 
 export default function Miembros() {
@@ -132,7 +140,7 @@ export default function Miembros() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="bg-gray-100 rounded-lg shadow-lg p-6"
+              className="bg-white rounded-lg shadow-lg p-6"
             >
               <h2 className="text-2xl font-semibold text-black mb-6 border-b-2 border-amber-400 pb-2">
                 {seccion.nombre}
@@ -156,13 +164,17 @@ export default function Miembros() {
                         className="object-cover w-full h-full"
                       />
                     </div>
+
                     <h3 className="text-sm font-medium text-black mb-1">
                       {miembro.nombre}
                     </h3>
-                     {/*
-                    <p className="text-black text-xs mb-1">
-                      <span className="font-semibold">Instrumento:</span> {miembro.instrumento}
-                    </p>*/}
+
+                    {seccion.mostrarInstrumento !== false && (
+                      <p className="text-black text-xs mb-1">
+                        <span className="font-semibold">Instrumento:</span> {miembro.instrumento}
+                      </p>
+                    )}
+
                     {miembro.rol && (
                       <p className="text-black text-xs">
                         <span className="font-semibold">Rol:</span> {miembro.rol}

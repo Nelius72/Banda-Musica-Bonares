@@ -145,7 +145,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="md:hidden px-6 pb-6 pt-2 bg-deepBlack border-t border-gold/20 space-y-6"
+            className="md:hidden px-6 pb-6 pt-2 bg-black border-t border-gold/20 space-y-6"
           >
             <MobileSection title="Sobre Nosotros">
               <MobileLink
@@ -261,7 +261,7 @@ function MobileSection({
 }) {
   return (
     <div>
-      <p className="text-gold font-semibold mb-2">{title}</p>
+      <p className="text-amber-300  mb-2">{title}</p>
       <div className="pl-3 space-y-2">{children}</div>
     </div>
   );
@@ -273,7 +273,7 @@ function MobileLink({ text, onClick, href }: { text: string; onClick: () => void
       <Link
         href={href}
         onClick={onClick}
-        className="block text-amber-300 hover:text-gold transition text-left w-full"
+        className="block text-amber-300 hover:text-amber-400 transition text-left w-full"
       >
         {text}
       </Link>
