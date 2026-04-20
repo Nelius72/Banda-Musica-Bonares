@@ -72,7 +72,7 @@ export default function Navbar() {
             </button>
             <DropdownItem text="Miembros" />
             <DropdownItem text="Premios y Reconocimientos" />
-            <DropdownItem text="Compositores" />
+            
           </Dropdown>
 
           <button>
@@ -159,7 +159,7 @@ export default function Navbar() {
                 text="Premios y Reconocimientos"
                 onClick={handleClose}
               />
-              <MobileLink text="Compositores" onClick={handleClose} />
+              
             </MobileSection>
 
             {/*<MobileSection title="Repertorio">
