@@ -75,7 +75,7 @@ export default function Navbar() {
               Historia
             </button>
             <DropdownItem text="Miembros" href="/miembros" />
-            <DropdownItem text="Premios y Reconocimientos" />
+            <DropdownItem text="Premios y Reconocimientos" href="/premios" />
             
           </Dropdown>
 
@@ -163,10 +163,7 @@ export default function Navbar() {
             }}
               />
               <MobileLink text="Miembros" href="/miembros" onClick={handleClose} />
-              <MobileLink
-                text="Premios y Reconocimientos"
-                onClick={handleClose}
-              />
+              <MobileLink text="Premios y Reconocimientos" href="/premios" onClick={handleClose} />
               
             </MobileSection>
 

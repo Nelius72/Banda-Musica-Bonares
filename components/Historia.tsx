@@ -14,59 +14,59 @@ type Hito = {
 
 const hitos: Hito[] = [
   {
-    fecha: "c. 1860–1870",
-    titulo: "Lorem Ipsum",
-    descripcion: "Lorem Ipsum dolor sit amet, consectetur adipiscing elit.",
-    imagen: "/hito1.jpg",
+    fecha: "1873",
+    titulo: "Primera fotografía conocida",
+    descripcion: "Foto restaurada: Primeros músicos de la banda en la puerta de la Iglesia, evidenciando su existencia en el siglo XIX.",
+    imagen: "/historia/1873.png",
   },
   {
-    fecha: "1882",
-    titulo: "Lorem Ipsum",
+    fecha: "1895",
+    titulo: "Finales siglo XX",
     descripcion:
-      "Participación en la visita de S.M. el Rey Alfonso XII a la comarca, documentado en prensa.",
-    imagen: "/hito2.jpg",
+      "Foto restaurada: Músicos de la banda en a finales del siglo XIX.",
+    imagen: "/historia/1895.png",
   },
   {
-    fecha: "1911",
-    titulo: "Lorem Ipsum",
+    fecha: "1920",
+    titulo: "Primeros años del siglo XX",
     descripcion:
-      "Fernando Vega Barroso modifica la partitura dejando una versión única.",
-    imagen: "/hito3.jpg",
+      "Foto restaurada: Músicos de la banda en los primeros años del siglo XX, mostrando la continuidad de la tradición musical.",
+    imagen: "/historia/1920.png",
   },
   {
-    fecha: "1985",
-    titulo: "Lorem Ipsum",
+    fecha: "1921",
+    titulo: "Creación de la cantera musical",
     descripcion:
-      "Creación de la cantera musical que garantiza el futuro artístico de la banda.",
-    imagen: "/hito4.jpg",
+      "Foto restaurada: Creación de la cantera musical que garantiza el futuro artístico de la banda.",
+    imagen: "/historia/1921.png",
   },
   {
-    fecha: "c. 1860–1870",
-    titulo: "Lorem Ipsum",
+    fecha: "1951",
+    titulo: "La banda en los años 50",
     descripcion:
-      "Primera imagen conocida de la Banda de Música de Bonares con 18 músicos uniformados en beige y gorra blanca.",
-    imagen: "/hito5.jpg",
+      "Foto restaurada: La banda en los años 50 durante las Fiestas Patronales",
+    imagen: "/historia/1951.png",
   },
   {
-    fecha: "6 marzo 1882",
-    titulo: "Lorem Ipsum",
+    fecha: "1960",
+    titulo: "La banda en los años 60",
     descripcion:
-      "Participación en la visita de S.M. el Rey Alfonso XII a la comarca, documentado en prensa.",
-    imagen: "/hito6.jpg",
+      "Foto restaurada: Un día de nuestro Corpus Chrisi en los años 60.",
+    imagen: "/historia/1960.png",
   },
   {
-    fecha: "1911",
-    titulo: "Lorem Ipsum",
+    fecha: "Años 80",
+    titulo: "Banda en los años 80",
     descripcion:
-      "Fernando Vega Barroso modifica la partitura dejando una versión única.",
-    imagen: "/hito7.jpg",
+      "Foto restaurada: Un día de convivencia en los años 80, con músicos de varias generaciones juntos.",
+    imagen: "/historia/1980.png",
   },
   {
-    fecha: "1985",
-    titulo: "Lorem Ipsum",
+    fecha: "1990",
+    titulo: "Plantilla de los años 90",
     descripcion:
-      "Creación de la cantera musical que garantiza el futuro artístico de la banda.",
-    imagen: "/hito8.jpg",
+      "Foto de la banda de los años 90 en la puerta de la Iglesia",
+    imagen: "/historia/1990.jpg",
   },
 ];
 
@@ -79,9 +79,8 @@ export default function Historia() {
       <div className="absolute inset-0 opacity-25 bg-[url('/partitura.jpg')] bg-cover bg-center"></div>
 
       <div className="relative max-w-7xl mx-auto space-y-32">
-        {/* ===================== */}
-        {/* 🏛 MUSEO HISTÓRICO */}
-        {/* ===================== */}
+       
+        {/*MUSEO HISTÓRICO */}
         <div>
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
@@ -152,9 +151,8 @@ export default function Historia() {
             </p>
           </motion.div>
 
-          {/* ===================== */}
+         
           {/* 1873 - Primer registro */}
-          {/* ===================== */}
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -80 }}
@@ -163,8 +161,8 @@ export default function Historia() {
               className="relative h-80 md:h-96 rounded-2xl overflow-hidden border border-amber-500"
             >
               <Image
-                src="/historia.jpg"
-                alt="Primeros músicos"
+                src="/historia/1873.png"
+                alt="Foto restaurada: Primeros músicos"
                 fill
                 className="object-cover grayscale hover:grayscale-0 transition"
               />
@@ -192,9 +190,9 @@ export default function Historia() {
             </motion.div>
           </div>
 
-          {/* ===================== */}
+         
           {/* 1876–1882 - Reconocimiento oficial */}
-          {/* ===================== */}
+          
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: 80 }}
@@ -226,7 +224,7 @@ export default function Historia() {
               className="relative h-80 md:h-96 rounded-2xl overflow-hidden border border-amber-500 md:order-2 order-1"
             >
               <Image
-                src="/hito3.jpg"
+                src="/historia/1895.png"
                 alt="Visita Alfonso XII"
                 fill
                 className="object-cover grayscale hover:grayscale-0 transition"
@@ -234,9 +232,8 @@ export default function Historia() {
             </motion.div>
           </div>
 
-          {/* ===================== */}
+          
           {/* 1913 - Expansión institucional */}
-          {/* ===================== */}
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -80 }}
@@ -245,7 +242,7 @@ export default function Historia() {
               className="relative h-80 md:h-96 rounded-2xl overflow-hidden border border-amber-500"
             >
               <Image
-                src="/hito4.jpg"
+                src="/historia/1921.png"
                 alt="Expansión"
                 fill
                 className="object-cover grayscale hover:grayscale-0 transition"
@@ -271,9 +268,8 @@ export default function Historia() {
             </motion.div>
           </div>
 
-          {/* ===================== */}
+          
           {/* 1930–1955 - Tradición y resistencia */}
-          {/* ===================== */}
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: 80 }}
@@ -309,7 +305,7 @@ export default function Historia() {
               className="relative h-80 md:h-96 rounded-2xl overflow-hidden border border-amber-500 md:order-2 order-1"
             >
               <Image
-                src="/hito1.jpg"
+                src="/historia/1920.png"
                 alt="Tradición"
                 fill
                 className="object-cover grayscale hover:grayscale-0 transition"
@@ -317,9 +313,8 @@ export default function Historia() {
             </motion.div>
           </div>
 
-          {/* ===================== */}
+          
           {/* 1980–Actualidad */}
-          {/* ===================== */}
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -80 }}
@@ -328,7 +323,7 @@ export default function Historia() {
               className="relative h-80 md:h-96 rounded-2xl overflow-hidden border border-amber-500"
             >
               <Image
-                src="/escuela2.jpg"
+                src="/historia/1980.png"
                 alt="Actualidad"
                 fill
                 className="object-cover grayscale hover:grayscale-0 transition"

@@ -18,7 +18,7 @@ export default function Contact() {
         {/* GRID PRINCIPAL */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
           {/* LOGO GRANDE */}
-          <div className="border border-amber-300 rounded-md p-6 flex items-center justify-center bg-[#0a0a0a]">
+          <div className="border border-amber-300 rounded-md p-6 flex items-center justify-center bg-black">
             <Image
               src="/logo.png"
               alt="Logo Banda"

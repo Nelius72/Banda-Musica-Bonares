@@ -13,10 +13,10 @@ export default function HistoryPreview() {
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         {/* GRID 5 COLUMNAS */}
         <div className="grid grid-cols-1 md:grid-cols-5 gap-12 items-center">
-          {/* IMAGEN (más grande y a la izquierda) */}
+          {/* IMAGEN */}
           <div className="relative w-full h-87.5 md:h-112.5 md:col-span-3 -translate-x-2 md:-translate-x-6">
             <Image
-              src="/historia.jpg"
+              src="/historia/1921.png"
               alt="Banda antigua"
               fill
               className="object-cover rounded-lg border-l-4 border-gold shadow-xl grayscale hover:grayscale-0 transition duration-500"
