@@ -61,11 +61,16 @@ export default function Events() {
       {/* Contenido */}
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* Título */}
-        <h2 className="text-2xl md:text-4xl font-semibold text-white text-center tracking-widest font-[Cinzel]">
+        <h2 className="text-2xl md:text-4xl font-semibold bg-linear-to-b 
+             from-[#cfaf5d] 
+             via-[#f5e396] 
+             to-[#9e7e2c]
+             bg-clip-text 
+             text-transparent text-center tracking-widest font-[Cinzel]">
           Próximos Eventos
         </h2>
 
-        <p className="mt-3 text-amber-200 text-center text-sm md:text-base">
+        <p className="mt-3 text-white text-center text-sm md:text-base">
           Agenda musical de la Banda de Música de Bonares
         </p>
 

@@ -4,14 +4,19 @@ import Image from "next/image";
 
 export default function Contact() {
   return (
-    <section id="contacto" className="bg-black py-20 border-t border-gold/20">
+    <section id="contacto" className="bg-[radial-gradient(circle_at_center,rgba(207,175,93,0.10),transparent_60%),radial-gradient(circle_at_top,rgba(245,227,150,0.08),transparent_50%),linear-gradient(to_bottom,#0a0a0a,#0f0f0f,#0a0a0a)] py-20 border-t border-gold/20">
       <div className="max-w-6xl mx-auto px-6">
         {/* TÍTULO */}
-        <h2 className="text-3xl md:text-4xl font-semibold text-white text-center tracking-widest font-[Cinzel]">
+        <h2 className="text-3xl md:text-4xl font-semibold bg-linear-to-b 
+             from-[#cfaf5d] 
+             via-[#f5e396] 
+             to-[#9e7e2c]
+             bg-clip-text 
+             text-transparent text-center tracking-widest font-[Cinzel]">
           Contacto
         </h2>
 
-        <p className="mt-3 text-amber-200 text-center text-sm md:text-base">
+        <p className="mt-3 text-white text-center text-sm md:text-base">
           Ponte en contacto con la Banda de Música de Bonares
         </p>
 
@@ -31,24 +36,44 @@ export default function Contact() {
           {/* INFO + FORM */}
           <div className="border border-amber-300 rounded-md p-6 bg-[#0a0a0a] flex flex-col justify-between">
             {/* INFO */}
-            <div className="space-y-4 text-amber-200">
+            <div className="space-y-4 text-white">
               <div>
-                <h3 className="text-amber-400 font-semibold">Dirección</h3>
+                <h3 className="bg-linear-to-b 
+             from-[#cfaf5d] 
+             via-[#f5e396] 
+             to-[#9e7e2c]
+             bg-clip-text 
+             text-transparent font-semibold">Dirección</h3>
                 <p>Pl. del Pilar, 92, 21830 Bonares, Huelva</p>
               </div>
 
               <div>
-                <h3 className="text-amber-400 font-semibold">Email</h3>
+                <h3 className="bg-linear-to-b 
+             from-[#cfaf5d] 
+             via-[#f5e396] 
+             to-[#9e7e2c]
+             bg-clip-text 
+             text-transparent font-semibold">Email</h3>
                 <p>bandabonares@gmail.com</p>
               </div>
 
               <div>
-                <h3 className="text-amber-400 font-semibold">Teléfono</h3>
+                <h3 className="bg-linear-to-b 
+             from-[#cfaf5d] 
+             via-[#f5e396] 
+             to-[#9e7e2c]
+             bg-clip-text 
+             text-transparent font-semibold">Teléfono</h3>
                 <p>+34 609 635 995</p>
               </div>
 
               <div>
-                <h3 className="text-amber-400 font-semibold mb-2">
+                <h3 className="bg-linear-to-b 
+             from-[#cfaf5d] 
+             via-[#f5e396] 
+             to-[#9e7e2c]
+             bg-clip-text 
+             text-transparent font-semibold mb-2">
                   Redes sociales
                 </h3>
 
@@ -108,7 +133,7 @@ export default function Contact() {
               />
               <button
                 type="submit"
-                className="w-full py-3 bg-amber-400 text-black font-semibold rounded-md hover:bg-white transition"
+                className="w-full py-3 bg-amber-200 text-black font-semibold rounded-md hover:bg-white transition"
               >
                 Enviar mensaje
               </button>

@@ -8,7 +8,7 @@ export default function HistoryPreview() {
       className="relative py-24 bg-black border-t border-gold/20 overflow-hidden"
     >
       {/* Fondo opcional */}
-      <div className="absolute inset-0 bg-black/80" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(207,175,93,0.10),transparent_60%),radial-gradient(circle_at_top,rgba(245,227,150,0.08),transparent_50%),linear-gradient(to_bottom,#0a0a0a,#0f0f0f,#0a0a0a)]" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         {/* GRID 5 COLUMNAS */}
@@ -25,11 +25,16 @@ export default function HistoryPreview() {
 
           {/* TEXTO */}
           <div className="md:col-span-2">
-            <h2 className="text-2xl md:text-4xl font-semibold text-white tracking-widest font-[Cinzel]">
+            <h2 className="text-2xl md:text-4xl font-semibold bg-linear-to-b 
+             from-[#cfaf5d] 
+             via-[#f5e396] 
+             to-[#9e7e2c]
+             bg-clip-text 
+             text-transparent tracking-widest font-[Cinzel]">
               Nuestra Historia
             </h2>
 
-            <p className="mt-6 text-amber-200 text-sm md:text-lg leading-relaxed">
+            <p className="mt-6 text-white text-sm md:text-lg leading-relaxed">
               Fundada en 1873, la A.C. Banda de Música de Bonares ha sido
               durante generaciones un pilar cultural en nuestro municipio. A lo
               largo de más de un siglo, hemos acompañado procesiones, conciertos
@@ -37,7 +42,7 @@ export default function HistoryPreview() {
               transmitiéndola de generación en generación.
             </p>
 
-            <p className="mt-4 text-amber-300 text-sm md:text-base">
+            <p className="mt-4 text-amber-200 text-sm md:text-base">
               Una historia escrita con música, esfuerzo y emoción colectiva.
             </p>
 

@@ -38,16 +38,21 @@ export default function Stats() {
   }, []);
 
   return (
-    <section className="bg-black py-20 border-t border-gold/20">
+    <section className="bg-[radial-gradient(circle_at_center,rgba(207,175,93,0.10),transparent_60%),radial-gradient(circle_at_top,rgba(245,227,150,0.08),transparent_50%),linear-gradient(to_bottom,#0a0a0a,#0f0f0f,#0a0a0a)] py-20 border-t border-gold/20">
 
       <div className="max-w-6xl mx-auto px-6 text-center">
 
         {/* Título */}
-        <h2 className="text-2xl md:text-4xl font-semibold text-white tracking-widest font-[Cinzel]">
+        <h2 className="text-2xl md:text-4xl font-semibold bg-linear-to-b 
+             from-[#cfaf5d] 
+             via-[#f5e396] 
+             to-[#9e7e2c]
+             bg-clip-text 
+             text-transparent tracking-widest font-[Cinzel]">
           Nuestra trayectoria en cifras
         </h2>
 
-        <p className="mt-3 text-amber-200 text-sm md:text-base">
+        <p className="mt-3 text-white text-sm md:text-base">
           Más de un siglo de música, esfuerzo y tradición
         </p>
 
@@ -57,12 +62,17 @@ export default function Stats() {
           {statsData.map((stat, i) => (
             <div key={i} className="text-center">
 
-              <div className="text-3xl md:text-5xl font-bold text-white">
+              <div className="text-3xl md:text-5xl font-bold bg-linear-to-b 
+             from-[#cfaf5d] 
+             via-[#f5e396] 
+             to-[#9e7e2c]
+             bg-clip-text 
+             text-transparent">
                 {Math.floor(counts[i])}
                 {stat.suffix}
               </div>
 
-              <p className="mt-2 text-amber-200 tracking-wide">
+              <p className="mt-2 text-white tracking-wide">
                 {stat.label}
               </p>
 

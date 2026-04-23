@@ -16,15 +16,30 @@ export default function Repertorio() {
     setAbierto((prev) => (prev === tipo ? null : tipo));
   };
 
-  const filtrar = (lista: Obra[]) =>
-    lista.filter((obra) =>
-      obra.titulo.toLowerCase().includes(busqueda.toLowerCase()),
-    );
+  //  FILTRADOS
+  const marchasFiltradas = marchasProcesionales.filter((obra) =>
+    obra.titulo.toLowerCase().includes(busqueda.toLowerCase())
+  );
+
+  const pasodoblesFiltrados = pasodobles.filter((obra) =>
+    obra.titulo.toLowerCase().includes(busqueda.toLowerCase())
+  );
+
+  const sinfonicasFiltradas = obrasSinfonicas.filter((obra) =>
+    obra.titulo.toLowerCase().includes(busqueda.toLowerCase())
+  );
 
   return (
-    <section className="min-h-screen bg-black text-amber-200 py-20 px-6">
+    <section className="min-h-screen bg-[radial-gradient(circle_at_top,rgba(245,227,150,0.12),transparent_55%),radial-gradient(circle_at_bottom,rgba(158,126,44,0.10),transparent_60%),linear-gradient(to_bottom,#0b0b0b,#0f0f0f,#0b0b0b)] text-amber-200 py-20 px-6">
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-4xl md:text-5xl text-center text-amber-400 font-[Cinzel] tracking-widest">
+        <h1
+          className="text-4xl md:text-5xl text-center bg-linear-to-b 
+          from-[#cfaf5d] 
+          via-[#f5e396] 
+          to-[#9e7e2c]
+          bg-clip-text 
+          text-transparent  font-[Cinzel] tracking-widest"
+        >
           Repertorio
         </h1>
 
@@ -44,26 +59,29 @@ export default function Repertorio() {
         <div className="mt-12 space-y-6">
           <Accordion
             titulo="Marchas Procesionales"
-            count={marchasProcesionales.length}
+            count={marchasFiltradas.length}
+            total={marchasProcesionales.length}
             abierto={abierto === "marcha"}
             onClick={() => toggle("marcha")}
-            obras={filtrar(marchasProcesionales)}
+            obras={marchasFiltradas}
           />
 
           <Accordion
             titulo="Pasodobles"
-            count={pasodobles.length}
+            count={pasodoblesFiltrados.length}
+            total={pasodobles.length}
             abierto={abierto === "pasodoble"}
             onClick={() => toggle("pasodoble")}
-            obras={filtrar(pasodobles)}
+            obras={pasodoblesFiltrados}
           />
 
           <Accordion
             titulo="Obras Sinfónicas"
-            count={obrasSinfonicas.length}
+            count={sinfonicasFiltradas.length}
+            total={obrasSinfonicas.length}
             abierto={abierto === "sinfonica"}
             onClick={() => toggle("sinfonica")}
-            obras={filtrar(obrasSinfonicas)}
+            obras={sinfonicasFiltradas}
           />
         </div>
       </div>
@@ -76,16 +94,20 @@ export default function Repertorio() {
 function Accordion({
   titulo,
   count,
+  total,
   abierto,
   onClick,
   obras,
 }: {
   titulo: string;
   count: number;
+  total: number;
   abierto: boolean;
   onClick: () => void;
   obras: Obra[];
 }) {
+  const filtrando = count !== total;
+
   return (
     <div className="border border-gold/20 rounded-md overflow-hidden">
       {/* HEADER */}
@@ -97,7 +119,14 @@ function Accordion({
       >
         <span className="flex items-center gap-2">
           {titulo}
-          <span className="text-xs text-amber-200/60">({count})</span>
+          <span
+            className={`text-xs ${
+              filtrando ? "text-amber-200" : "text-amber-200/60"
+            }`}
+          >
+            ({count}
+            {filtrando })
+          </span>
         </span>
 
         <span className="text-xl">{abierto ? "−" : "+"}</span>
@@ -124,7 +153,7 @@ function Accordion({
                   {obra.titulo}
                 </span>
 
-                <span className="hover:text-white  transition">▶</span>
+                <span className="hover:text-white transition">▶</span>
               </a>
             ))}
           </div>

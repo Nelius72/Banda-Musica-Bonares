@@ -2,7 +2,7 @@ import { FaFacebook, FaInstagram, FaSpotify, FaYoutube } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-black border-t border-gold/20 text-amber-200">
+    <footer className="bg-[radial-gradient(circle_at_center,rgba(207,175,93,0.10),transparent_60%),radial-gradient(circle_at_top,rgba(245,227,150,0.08),transparent_50%),linear-gradient(to_bottom,#0a0a0a,#0f0f0f,#0a0a0a)] border-t border-gold/20 text-amber-200">
 
       <div className="max-w-6xl mx-auto px-6 py-12">
 
@@ -11,18 +11,23 @@ export default function Footer() {
 
           {/* LOGO / IDENTIDAD */}
           <div className="flex flex-col items-start gap-4">
-            <h3 className="text-amber-400 font-semibold text-lg">
+            <h3 className="bg-linear-to-b 
+             from-[#cfaf5d] 
+             via-[#f5e396] 
+             to-[#9e7e2c]
+             bg-clip-text 
+             text-transparent font-semibold text-lg">
               A.C. Banda de Música de Bonares 1873
             </h3>
 
-            <p className="text-sm text-amber-200/80">
+            <p className="text-sm text-white">
               Tradición, cultura y música al servicio del pueblo desde 1873.
             </p>
           </div>
 
           {/* CONTACTO RÁPIDO */}
-          <div className="space-y-2 text-sm">
-            <h4 className="text-amber-400 font-semibold mb-2">Contacto</h4>
+          <div className="space-y-2 text-sm text-white">
+            <h4 className=" text-amber-200 font-semibold mb-2">Contacto</h4>
             <p>Pl. del Pilar, 92, 21830 Bonares, Huelva</p>
             <p>bandabonares@gmail.com</p>
             <p>+34 609 635 995</p>
@@ -30,7 +35,12 @@ export default function Footer() {
 
           {/* REDES SOCIALES */}
           <div className="flex flex-col gap-3">
-            <h4 className="text-amber-400 font-semibold mb-2">Síguenos en redes</h4>
+            <h4 className="bg-linear-to-b 
+             from-[#cfaf5d] 
+             via-[#f5e396] 
+             to-[#9e7e2c]
+             bg-clip-text 
+             text-transparent font-semibold mb-2">Síguenos en redes</h4>
 
             <div className="flex gap-4 text-amber-200">
               <a
@@ -68,7 +78,7 @@ export default function Footer() {
         </div>
 
         {/* SEPARADOR */}
-        <div className="border-t border-gold/10 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-amber-400">
+        <div className="border-t border-gold/10 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-amber-200">
 
           <p>
             © {new Date().getFullYear()} Banda de Música de Bonares . 

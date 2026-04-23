@@ -19,6 +19,12 @@
   }
 }
 
+.gold-gradient {
+  background: linear-gradient(to bottom, #cfaf5d 22%, #f5e396 45%, #9e7e2c 85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

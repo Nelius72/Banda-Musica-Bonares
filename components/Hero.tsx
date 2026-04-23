@@ -30,11 +30,16 @@ export default function Hero() {
       {/* Contenido */}
       <div className="relative z-10 max-w-4xl px-6">
 
-        <h1 className="text-3xl md:text-6xl font-semibold tracking-widest text-white uppercase font-[Cinzel]">
+        <h1 className="text-3xl md:text-6xl font-semibold tracking-widest bg-linear-to-b 
+             from-[#cfaf5d] 
+             via-[#f5e396] 
+             to-[#9e7e2c]
+             bg-clip-text 
+             text-transparent uppercase font-[Cinzel]">
           Música que trasciende el tiempo
         </h1>
 
-        <p className="mt-6 text-sm md:text-lg text-amber-200 tracking-wide">
+        <p className="mt-6 text-sm md:text-lg text-white tracking-wide">
           Más de un siglo de tradición, emoción y cultura musical en cada nota.
         </p>
 
@@ -43,13 +48,13 @@ export default function Hero() {
           {/* BOTÓN EVENTOS */}
           <button
             onClick={scrollToEvents}
-            className="px-6 py-3 border border-gold text-amber-400 hover:bg-gold hover:text-white transition rounded-md tracking-wide"
+            className="px-6 py-3 border border-gold text-amber-200 hover:bg-gold hover:text-white transition rounded-md tracking-wide"
           >
             Próximos Actos
           </button>
 
           {/* OTRO BOTÓN (puedes dejarlo o cambiarlo luego) */}
-          <button className="px-6 py-3 border border-gold text-amber-400 hover:bg-gold hover:text-white transition rounded-md tracking-wide">
+          <button className="px-6 py-3 border border-gold text-amber-200 hover:bg-gold hover:text-white transition rounded-md tracking-wide">
             <Link href="/repertorio">
               Nuestro Repertorio
             </Link>

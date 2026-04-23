@@ -21,7 +21,7 @@ export default function Navbar() {
   }, [open]);
 
   return (
-    <nav className="sticky top-0 z-50 bg-black backdrop-blur-md text-amber-400 border-b border-gold shadow-md">
+    <nav className="sticky top-0 z-50 bg-black backdrop-blur-md text-amber-200 border-b border-gold shadow-md">
       {/* HEADER */}
       <div className="relative flex flex-col md:flex-row md:items-center h-auto md:h-24 px-4 py-3 md:py-0">
         {/* LEFT - LOGO + TITLE */}
@@ -51,7 +51,12 @@ export default function Navbar() {
           </button>
 
           {/* TITLE */}
-          <span className="text-sm md:text-2xl font-semibold tracking-wider text-gold whitespace-nowrap">
+          <span className="text-sm md:text-2xl font-semibold tracking-wider bg-linear-to-b 
+             from-[#cfaf5d] 
+             via-[#f5e396] 
+             to-[#9e7e2c]
+             bg-clip-text 
+             text-transparent whitespace-nowrap">
             A.C. Banda de Música de Bonares 1873
           </span>
         </div>
@@ -258,7 +263,7 @@ function MobileSection({
 }) {
   return (
     <div>
-      <p className="text-amber-300  mb-2">{title}</p>
+      <p className="text-amber-200  mb-2">{title}</p>
       <div className="pl-3 space-y-2">{children}</div>
     </div>
   );
@@ -270,7 +275,7 @@ function MobileLink({ text, onClick, href }: { text: string; onClick: () => void
       <Link
         href={href}
         onClick={onClick}
-        className="block text-amber-300 hover:text-amber-400 transition text-left w-full"
+        className="block text-amber-200 hover:text-amber-400 transition text-left w-full"
       >
         {text}
       </Link>
@@ -279,7 +284,7 @@ function MobileLink({ text, onClick, href }: { text: string; onClick: () => void
   return (
     <button
       onClick={onClick}
-      className="block text-amber-300 hover:text-gold transition text-left w-full"
+      className="block text-amber-200 hover:text-gold transition text-left w-full"
     >
       {text}
     </button>
