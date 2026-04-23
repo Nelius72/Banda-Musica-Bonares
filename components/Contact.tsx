@@ -48,23 +48,27 @@ export default function Contact() {
               </div>
 
               <div>
+                <a href="mailto:bandabonares@gmail.com">
                 <h3 className="bg-linear-to-b 
              from-[#cfaf5d] 
              via-[#f5e396] 
              to-[#9e7e2c]
              bg-clip-text 
-             text-transparent font-semibold">Email</h3>
-                <p>bandabonares@gmail.com</p>
+             text-transparent font-semibold ">Email</h3>
+                  <p className="hover:text-amber-200 transition">bandabonares@gmail.com</p>
+                </a>
               </div>
 
               <div>
+                <a href="call:+34609635995">
                 <h3 className="bg-linear-to-b 
              from-[#cfaf5d] 
              via-[#f5e396] 
              to-[#9e7e2c]
              bg-clip-text 
              text-transparent font-semibold">Teléfono</h3>
-                <p>+34 609 635 995</p>
+                  <p className="hover:text-amber-200 transition">+34 609 635 995</p>
+                </a>
               </div>
 
               <div>
@@ -131,7 +135,7 @@ export default function Contact() {
                 rows={4}
                 className="w-full p-3 bg-black border border-amber-300 rounded-md text-amber-200"
               />
-              <button
+              <button 
                 type="submit"
                 className="w-full py-3 bg-amber-200 text-black font-semibold rounded-md hover:bg-white transition"
               >
