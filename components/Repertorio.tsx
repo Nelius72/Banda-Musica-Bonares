@@ -149,7 +149,7 @@ function Accordion({
                 className="flex justify-between py-2 border-b border-gold/10 
                 hover:text-gold transition"
               >
-                <span className="normal-case font-[Playfair_Display]">
+                <span className="normal-case font-[Cinzel]">
                   {obra.titulo}
                 </span>
 

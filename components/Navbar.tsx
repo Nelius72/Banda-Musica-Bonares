@@ -21,7 +21,7 @@ export default function Navbar() {
   }, [open]);
 
   return (
-    <nav className="sticky top-0 z-50 bg-black backdrop-blur-md text-amber-200 border-b border-gold shadow-md">
+    <nav className="sticky top-0 z-50 bg-[radial-gradient(circle_at_center,rgba(207,175,93,0.10),transparent_60%),radial-gradient(circle_at_top,rgba(245,227,150,0.08),transparent_50%),linear-gradient(to_bottom,#0a0a0a,#0f0f0f,#0a0a0a)] backdrop-blur-md text-amber-200 border-b border-gold shadow-md">
       {/* HEADER */}
       <div className="relative flex flex-col md:flex-row md:items-center h-auto md:h-24 px-4 py-3 md:py-0">
         {/* LEFT - LOGO + TITLE */}

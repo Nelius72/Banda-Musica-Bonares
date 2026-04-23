@@ -3,72 +3,8 @@
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
+import { hitos, Hito } from "@/data/historia";
 
-type Hito = {
-  fecha: string;
-  titulo: string;
-  descripcion: string;
-  imagen?: string;
-  alt?: string;
-};
-
-const hitos: Hito[] = [
-  {
-    fecha: "1873",
-    titulo: "Primera fotografía conocida",
-    descripcion:
-      "Foto restaurada: Primeros músicos de la banda en la puerta de la Iglesia, evidenciando su existencia en el siglo XIX.",
-    imagen: "/historia/1873.png",
-  },
-  {
-    fecha: "1895",
-    titulo: "Finales siglo XX",
-    descripcion:
-      "Foto restaurada: Músicos de la banda en a finales del siglo XIX.",
-    imagen: "/historia/1895.png",
-  },
-  {
-    fecha: "1920",
-    titulo: "Primeros años del siglo XX",
-    descripcion:
-      "Foto restaurada: Músicos de la banda en los primeros años del siglo XX, mostrando la continuidad de la tradición musical.",
-    imagen: "/historia/1920.png",
-  },
-  {
-    fecha: "1921",
-    titulo: "Creación de la cantera musical",
-    descripcion:
-      "Foto restaurada: Creación de la cantera musical que garantiza el futuro artístico de la banda.",
-    imagen: "/historia/1921.png",
-  },
-  {
-    fecha: "1951",
-    titulo: "La banda en los años 50",
-    descripcion:
-      "Foto restaurada: La banda en los años 50 durante las Fiestas Patronales",
-    imagen: "/historia/1951.png",
-  },
-  {
-    fecha: "1960",
-    titulo: "La banda en los años 60",
-    descripcion:
-      "Foto restaurada: Un día de nuestro Corpus Chrisi en los años 60.",
-    imagen: "/historia/1960.png",
-  },
-  {
-    fecha: "Años 80",
-    titulo: "Banda en los años 80",
-    descripcion:
-      "Foto restaurada: Un día de convivencia en los años 80, con músicos de varias generaciones juntos.",
-    imagen: "/historia/1980.png",
-  },
-  {
-    fecha: "1990",
-    titulo: "Plantilla de los años 90",
-    descripcion: "Foto de la banda de los años 90 en la puerta de la Iglesia",
-    imagen: "/historia/1990.jpg",
-  },
-];
 
 export default function Historia() {
   const [activo, setActivo] = useState<Hito | null>(null);
@@ -98,8 +34,7 @@ export default function Historia() {
              via-[#f5e396] 
              to-[#9e7e2c]
              bg-clip-text 
-             text-transparent
-  "
+             text-transparent"
           >
             Museo Histórico
           </motion.h2>
