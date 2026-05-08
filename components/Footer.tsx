@@ -85,7 +85,7 @@ export default function Footer() {
           </p>
             <p>Todos los Derechos Reservados</p>
           <p>
-            Dev & Design: <a href="https://portfolio-personal-crb-psi-flame.vercel.app" target="_blank" className="hover:text-white transition">
+            Dev & Design: <a href="https://portfolio-personal-crb.vercel.app" target="_blank" className="hover:text-white transition">
               Cornelio Romero Borrero
             </a>
           </p>
