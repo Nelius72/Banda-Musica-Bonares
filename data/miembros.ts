@@ -111,7 +111,7 @@ export const secciones: Seccion[] = [
     },
     {
         nombre: "Trompetas, Cornetas y Fliscornos",
-        mostrarInstrumento: true,
+        mostrarInstrumento: false,
         miembros: [
             {
                 nombre: "Álvaro Vega",
@@ -123,11 +123,7 @@ export const secciones: Seccion[] = [
                 instrumento: "Trompeta",
                 foto: "/miembros/trompetas/rocio.png",
             },
-            {
-                nombre: "Cristobal Camacho",
-                instrumento: "Corneta",
-                foto: "/miembros/trompetas/camacho.png",
-            },
+            
             {
                 nombre: "Pepe López",
                 instrumento: "Trompeta / Corneta",
@@ -300,4 +296,35 @@ export const secciones: Seccion[] = [
             },
         ],
     },
+    {
+        nombre: "Tambores y Cornetas",
+        mostrarInstrumento: true,
+        miembros: [
+            {
+                nombre: "Jose Contreras",
+                instrumento: "Timbal",
+                foto: "/miembros/usuario.jpg",
+            },
+            {
+                nombre: "J. Ramón Pulido",
+                instrumento: "Timbal",
+                foto: "/miembros/usuario.jpg",
+            },
+            {
+                nombre: "Marco Antonio Ramos",
+                instrumento: "Tambor",
+                foto: "/miembros/usuario.jpg",
+            },
+            {
+                nombre: "Cristobal Camacho",
+                instrumento: "Corneta",
+                foto: "/miembros/trompetas/camacho.png",
+            },
+            {
+                nombre: "Miembro",
+                instrumento: "Tambor",
+                foto: "/miembros/usuario.jpg",
+            },
+        ],
+    }
 ];

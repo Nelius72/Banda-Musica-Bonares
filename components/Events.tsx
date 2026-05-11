@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { eventos } from "@/data/eventos";
 
-
 export default function Events() {
   return (
     <section
@@ -27,12 +26,14 @@ export default function Events() {
       {/* Contenido */}
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* Título */}
-        <h2 className="text-2xl md:text-4xl font-semibold bg-linear-to-b 
+        <h2
+          className="text-2xl md:text-4xl font-semibold bg-linear-to-b 
              from-[#cfaf5d] 
              via-[#f5e396] 
              to-[#9e7e2c]
              bg-clip-text 
-             text-transparent text-center tracking-widest font-[Cinzel]">
+             text-transparent text-center tracking-widest font-[Cinzel]"
+        >
           Próximos Eventos
         </h2>
 
@@ -64,7 +65,7 @@ export default function Events() {
                   year: "numeric",
                 })}
               </div>
-
+              <div className="text-xs text-amber-300">{event.hour} h</div>
               <h3 className="mt-2 text-sm font-semibold text-white leading-tight">
                 {event.title}
               </h3>

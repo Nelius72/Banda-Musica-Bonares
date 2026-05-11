@@ -29,8 +29,12 @@ export default function Footer() {
           <div className="space-y-2 text-sm text-white">
             <h4 className=" text-amber-200 font-semibold mb-2">Contacto</h4>
             <p>Pl. del Pilar, 92, 21830 Bonares, Huelva</p>
-            <p>bandabonares@gmail.com</p>
-            <p>+34 609 635 995</p>
+            <a href="mailto:bandabonares@gmail.com" className="hover:text-amber-400 transition">
+              <p>bandabonares@gmail.com</p>
+            </a>
+            <a href="tel:+34609635995" className="hover:text-amber-400 transition mt-4 block">
+              +34 609 635 995
+            </a>
           </div>
 
           {/* REDES SOCIALES */}
