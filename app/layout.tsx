@@ -26,7 +26,7 @@ const cinzel = Cinzel({
 
 
 
-export const metadata = {
+export const metadata: Metadata = {
   title: {
     default: 'Banda de Música de Bonares | Tradición y Cultura',
     template: '%s | Banda de Música de Bonares'
