@@ -26,9 +26,32 @@ const cinzel = Cinzel({
 
 
 
-export const metadata: Metadata = {
-  title: "Banda Música Bonares",
-  description: "Página principal de Banda Música Bonares",
+export const metadata = {
+  title: {
+    default: 'Banda de Música de Bonares | Tradición y Cultura',
+    template: '%s | Banda de Música de Bonares'
+  },
+  description: 'Sitio oficial de la Banda de Música de Bonares (Huelva). Conoce nuestra historia, próximos conciertos, miembros, repertorio y cómo contratarnos.',
+  keywords: ['Banda de música Bonares', 'bmb', 'eventos musicales Bonares', 'semana santa'],
+  alternates: {
+    canonical: 'https://bandamusicabonares.com/',
+  },
+  openGraph: {
+    title: 'Banda de Música de Bonares',
+    description: 'Acompañando momentos inolvidables desde Bonares para toda Andalucía.',
+    url: 'https://bandamusicabonares.com/',
+    siteName: 'Banda de Música de Bonares',
+    locale: 'es_ES',
+    type: 'website',
+    images: [
+      {
+        url: '/bandaverano.jpg', // Imagen de la banda completa
+        width: 1200,
+        height: 630,
+        alt: 'Banda de Música de Bonares en concierto',
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
