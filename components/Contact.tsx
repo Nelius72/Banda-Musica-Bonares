@@ -1,42 +1,74 @@
 "use client";
+
 import { useState } from "react";
-import { FaFacebook, FaInstagram, FaSpotify, FaYoutube } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaSpotify,
+  FaYoutube,
+} from "react-icons/fa";
 import Image from "next/image";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 export default function Contact() {
+  const { executeRecaptcha } = useGoogleReCaptcha();
+
   const [formData, setFormData] = useState({
     nombre: "",
     email: "",
     mensaje: "",
   });
 
-  const [status, setStatus] = useState("idle"); // idle | sending | success | error
+  const [status, setStatus] = useState<
+    "idle" | "sending" | "success" | "error"
+  >("idle");
 
-  const handleChange = (e: { target: { name: string; value: string; }; }) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (
+    e: React.FormEvent<HTMLFormElement>
+  ) => {
     e.preventDefault();
+
+    if (!executeRecaptcha) {
+      console.error("ReCAPTCHA no está disponible todavía");
+      return;
+    }
+
     setStatus("sending");
 
     try {
-      const response = await fetch("https://formspree.io/f/mrejrkkz", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      // Generar token reCAPTCHA v3
+      const captchaToken = await executeRecaptcha("test_form");
+
+      // Body para Formspree
+      const bodyData = {
+        ...formData,
+        "g-recaptcha-response": captchaToken,
+      };
+
+      const response = await fetch(
+        "https://formspree.io/f/mrejrkkz",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(bodyData),
+        }
+      );
 
       if (response.ok) {
         setStatus("success");
 
-        
         setFormData({
           nombre: "",
           email: "",
@@ -45,8 +77,8 @@ export default function Contact() {
       } else {
         setStatus("error");
       }
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
+      console.error(error);
       setStatus("error");
     }
   };
@@ -66,7 +98,6 @@ export default function Contact() {
         </p>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-          
           {/* LOGO */}
           <div className="border border-amber-300 rounded-md p-6 flex items-center justify-center bg-black">
             <Image
@@ -80,14 +111,16 @@ export default function Contact() {
 
           {/* INFO + FORM */}
           <div className="border border-amber-300 rounded-md p-6 bg-[#0a0a0a] flex flex-col justify-between">
-            
             {/* INFO */}
             <div className="space-y-4 text-white">
               <div>
                 <h3 className="bg-linear-to-b from-[#cfaf5d] via-[#f5e396] to-[#9e7e2c] bg-clip-text text-transparent font-semibold">
                   Dirección
                 </h3>
-                <p>Pl. del Pilar, 92, 21830 Bonares, Huelva</p>
+
+                <p>
+                  Pl. del Pilar, 92, 21830 Bonares, Huelva
+                </p>
               </div>
 
               <div>
@@ -95,6 +128,7 @@ export default function Contact() {
                   <h3 className="bg-linear-to-b from-[#cfaf5d] via-[#f5e396] to-[#9e7e2c] bg-clip-text text-transparent font-semibold">
                     Email
                   </h3>
+
                   <p className="hover:text-amber-200 transition">
                     bandabonares@gmail.com
                   </p>
@@ -106,6 +140,7 @@ export default function Contact() {
                   <h3 className="bg-linear-to-b from-[#cfaf5d] via-[#f5e396] to-[#9e7e2c] bg-clip-text text-transparent font-semibold">
                     Teléfono
                   </h3>
+
                   <p className="hover:text-amber-200 transition">
                     +34 609 635 995
                   </p>
@@ -118,16 +153,35 @@ export default function Contact() {
                 </h3>
 
                 <div className="flex items-center gap-4">
-                  <a href="https://www.facebook.com/bandabonares?locale=es_ES" target="_blank">
+                  <a
+                    href="https://www.facebook.com/bandabonares?locale=es_ES"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <FaFacebook size={30} />
                   </a>
-                  <a href="https://www.instagram.com/bandabonaresbmb/" target="_blank">
+
+                  <a
+                    href="https://www.instagram.com/bandabonaresbmb/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <FaInstagram size={30} />
                   </a>
-                  <a href="https://spotify.com" target="_blank">
+
+                  <a
+                    href="https://spotify.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <FaSpotify size={30} />
                   </a>
-                  <a href="https://www.youtube.com/@bandamusicabonares9249" target="_blank">
+
+                  <a
+                    href="https://www.youtube.com/@bandamusicabonares9249"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <FaYoutube size={30} />
                   </a>
                 </div>
@@ -135,8 +189,10 @@ export default function Contact() {
             </div>
 
             {/* FORM */}
-            <form onSubmit={handleSubmit} className="mt-6 space-y-3">
-              
+            <form
+              onSubmit={handleSubmit}
+              className="mt-6 space-y-3"
+            >
               <input
                 type="text"
                 name="nombre"
@@ -169,10 +225,14 @@ export default function Contact() {
 
               <button
                 type="submit"
-                disabled={status === "sending"}
+                disabled={
+                  status === "sending" || !executeRecaptcha
+                }
                 className="w-full py-3 bg-amber-200 text-black font-semibold rounded-md hover:bg-white transition disabled:opacity-50"
               >
-                {status === "sending" ? "Enviando..." : "Enviar mensaje"}
+                {status === "sending"
+                  ? "Enviando..."
+                  : "Enviar mensaje"}
               </button>
 
               {status === "success" && (
@@ -193,13 +253,12 @@ export default function Contact() {
           <div className="border border-amber-300 rounded-md overflow-hidden bg-[#0a0a0a]">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1586.4535260775176!2d-6.688611209392576!3d37.321029322817765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd11e8e0140cfcb3%3A0xa8a7a74dad9e61f0!2sCasa%20Municipal%20De%20La%20M%C3%BAsica!5e0!3m2!1ses!2ses!4v1776094466173!5m2!1ses!2ses"
-              className="w-full h-full min-h-100"
+              className="w-full h-full min-h-[400px]"
               loading="lazy"
               style={{ border: 0 }}
               allowFullScreen
             />
           </div>
-
         </div>
       </div>
     </section>
