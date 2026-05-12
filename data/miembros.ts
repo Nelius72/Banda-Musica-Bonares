@@ -110,7 +110,7 @@ export const secciones: Seccion[] = [
         ],
     },
     {
-        nombre: "Trompetas, Cornetas y Fliscornos",
+        nombre: "Trompetas y Fliscornos",
         mostrarInstrumento: false,
         miembros: [
             {
