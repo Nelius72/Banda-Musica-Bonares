@@ -212,7 +212,7 @@ export const secciones: Seccion[] = [
                 foto: "/miembros/usuario.jpg",
             },
             {
-                nombre: "Lola",
+                nombre: "Lola Coronel",
                 instrumento: "Alto",
                 foto: "/miembros/usuario.jpg",
             },
