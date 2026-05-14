@@ -41,7 +41,7 @@ export default function Navbar() {
             className="flex items-center"
           >
             <Image
-              src="/logo.png"
+              src="/logo2.png"
               alt="Logo Banda"
               width={70}
               height={70}

@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 const statsData = [
-  { label: "Músicos", value: 45, suffix: "+" },
+  { label: "Músicos", value: 50, suffix: "+" },
   { label: "Actuaciones anuales", value: 87, suffix: "+" },
   { label: "Partituras en archivo", value: 1500, suffix: "+" },
   { label: "Grabaciones discográficas", value: 3, suffix: "" },

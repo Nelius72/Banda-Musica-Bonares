@@ -6,7 +6,7 @@ export default function ReCaptchaProvider({ children }: { children: React.ReactN
     <GoogleReCaptchaProvider
       reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ""}
       language="es"
-      // Aquí puedes añadir scriptProps si necesitas defer o async según la doc
+      
     >
       {children}
     </GoogleReCaptchaProvider>

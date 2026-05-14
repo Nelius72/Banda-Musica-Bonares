@@ -101,7 +101,7 @@ export default function Contact() {
           {/* LOGO */}
           <div className="border border-amber-300 rounded-md p-6 flex items-center justify-center bg-black">
             <Image
-              src="/logo.png"
+              src="/logo2.png"
               alt="Logo Banda"
               width={220}
               height={220}
