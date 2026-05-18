@@ -1,36 +1,123 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+<h1>🎺 Web Oficial Banda de Música de Bonares</h1>
+
+Sitio web moderno, accesible y optimizado para SEO desarrollado para la **Banda de Música de Bonares**, donde los usuarios pueden consultar información sobre eventos, historia, miembros y novedades de la banda.
+
+🌐 **Web Operativa:** [https://bandademusicabonares.com](https://bandademusicabonares.com)
+
+---
+
+## 🚀 Tecnologías utilizadas
+
+* ⚛️ React
+* ▲ Next.js
+* 🎨 TailwindCSS
+* 🟦 TypeScript
+* ✨ Framer Motion
+* 🌍 HTML5
+* 📱 Responsive Design
+* 🔍 SEO Optimization
+* ♿ Web Accessibility (WCAG)
+* 🔐 SSL Security
+* 📩 Formspree (gestión de formularios)
+* 🛡 Google reCAPTCHA v3
+
+---
+
+## 🎯 Características principales
+
+* Diseño moderno y elegante
+* Totalmente responsive (mobile-first)
+* Optimización SEO avanzada
+* Animaciones suaves con Framer Motion
+* Accesibilidad mejorada
+* Protección anti-spam con reCAPTCHA v3
+* Formularios funcionales mediante Formspree
+* Despliegue seguro con SSL
+
+---
+
+## 📸 Preview
+
+![Preview del proyecto](./public/projects/webbmb.png)
+
+---
+
+## 🏗 Arquitectura del proyecto
+
+El proyecto está desarrollado con **Next.js App Router** y estructurado en componentes reutilizables para mejorar:
+
+* Escalabilidad
+* Mantenibilidad
+* Rendimiento
+* Experiencia de usuario
+
+---
+
+## 📦 Instalación y uso local
+
+Clona el repositorio:
+
+```bash
+git clone https://github.com/Nelius72/Banda-Musica-Bonares.git
+```
+
+Accede al directorio:
+
+```bash
+cd Banda-Musica-Bonares
+```
+
+Instala dependencias:
+
+```bash
+npm install
+```
+
+Ejecuta el servidor de desarrollo:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+El proyecto estará disponible en:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📈 Objetivos del proyecto
 
-To learn more about Next.js, take a look at the following resources:
+Este proyecto fue desarrollado con el objetivo de:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* Modernizar la presencia digital de la banda
+* Mejorar la experiencia de usuario
+* Aplicar buenas prácticas de desarrollo frontend
+* Implementar optimización SEO real en producción
+* Trabajar con TypeScript en entorno profesional
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🧠 Aprendizajes clave
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* Implementación avanzada de SEO en Next.js
+* Gestión de formularios segura
+* Mejora de accesibilidad web
+* Animaciones optimizadas sin afectar rendimiento
+* Optimización de carga y rendimiento
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 👨‍💻 Autor
+
+**Cornelio Romero Borrero**
+Desarrollador Web Frontend / Fullstack
+
+GitHub: [https://github.com/Nelius72](https://github.com/Nelius72)
+
+---
+
+
