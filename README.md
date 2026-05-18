@@ -38,12 +38,6 @@ Sitio web moderno, accesible y optimizado para SEO desarrollado para la **Banda 
 
 ---
 
-## 📸 Preview
-
-![Preview del proyecto](./public/projects/webbmb.png)
-
----
-
 ## 🏗 Arquitectura del proyecto
 
 El proyecto está desarrollado con **Next.js App Router** y estructurado en componentes reutilizables para mejorar:
