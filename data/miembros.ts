@@ -100,7 +100,7 @@ export const secciones: Seccion[] = [
             {
                 nombre: "Elena Martín",
                 instrumento: "Flauta 1º",
-                foto: "/miembros/flautas/elena.png",
+                foto: "/miembros/flautas/elenama.png",
             },
             {
                 nombre: "Patricia Salvador",

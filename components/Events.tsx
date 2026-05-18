@@ -42,7 +42,7 @@ export default function Events() {
         </p>
 
         {/* Grid */}
-        <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {eventos.map((event, index) => (
             <div
               key={index}
@@ -65,7 +65,7 @@ export default function Events() {
                   year: "numeric",
                 })}
               </div>
-              <div className="text-xs text-amber-300">{event.hour} h</div>
+              <div className="text-xs text-amber-300">{event.hour} horas</div>
               <h3 className="mt-2 text-sm font-semibold text-white leading-tight">
                 {event.title}
               </h3>

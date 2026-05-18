@@ -8,19 +8,13 @@ export type Evento = {
 };
 
 export const eventos : Evento[] = [
+ 
   {
-    title: "Cruces de Mayo",
-    date: "2026-05-17",
+    title: "Musical Disney",
+    date: "2026-06-06",
     location: "Bonares",
-    hour: "11:30",
-    description: "Tradicional procesión de las 12 Cruces de Mayo.",
-  },
-  {
-    title: "Serenata a las Cruces",
-    date: "2026-05-17",
-    location: "Bonares",
-    hour: "20:30",
-    description: "Visita a las Cruces de Mayo acompañada de música en directo.",
+    hour: "Por determinar",
+    description: "Concierto temático con los alumnos de la Escuela de Música",
   },
   {
     title: "Corpus Christi",
@@ -37,10 +31,24 @@ export const eventos : Evento[] = [
     description: "Concierto vespertino de Corpus Christi.",
   },
   {
-    title: "Conciertos de Verano",
-    date: "2026-08-01",
+    title: "Carnaval Sinfónico",
+    date: "2026-07-26",
     location: "Bonares / Plaza de España",
+    hour: "22:00",
+    description: "Concierto de Carnaval con repertorio festivo y animado.",
+  },
+  {
+    title: "Concierto de Verano a definir",
+    date: "2026-08-30",
+    location: "Bonares / Plaza de España",
+    hour: "22:00",
+    description: "Contenido a definir",
+  },
+  {
+    title: "Semana Cultural Andaluza",
+    date: "2026-09-26",
+    location: "Bonares / Plaza de la Constitución",
     hour: "Por determinar",
-    description: "Conciertos al aire libre durante el verano.",
+    description: "Concierto de Semana Cultural Andaluza con repertorio de música tradicional andaluza.",
   },
 ];
