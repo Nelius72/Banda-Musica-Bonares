@@ -20,13 +20,13 @@ export const secciones: Seccion[] = [
                 nombre: "Antonio León",
                 instrumento: "Tuba",
                 cargo: "Director",
-                foto: "/miembros/director.png",
+                foto: "/miembros/junta/director.png",
             },
             {
                 nombre: "Diego Coronel",
                 instrumento: "",
                 cargo: "Presidente",
-                foto: "/miembros/presidente.png",
+                foto: "/miembros/junta/presidente.png",
             },
             {
                 nombre: "J. Antonio Coronel",
@@ -38,7 +38,7 @@ export const secciones: Seccion[] = [
                 nombre: "Leonardo García",
                 instrumento: "",
                 cargo: "Secretario",
-                foto: "/miembros/secretario.jpg",
+                foto: "/miembros/junta/secretario.jpg",
             },
         ],
     },
@@ -86,6 +86,16 @@ export const secciones: Seccion[] = [
                 instrumento: "Clarinete 3º",
                 foto: "/miembros/clarinetes/manoli.png",
             },
+            {
+                nombre: "Hugo Redondo",
+                instrumento: "Clarinete 3º",
+                foto: "/miembros/clarinetes/hugo.png",
+            },
+            {
+                nombre: "Cristina Molina",
+                instrumento: "Clarinete 2º",
+                foto: "/miembros/clarinetes/cristinam.png",
+            },
         ],
     },
     {
@@ -116,7 +126,7 @@ export const secciones: Seccion[] = [
     },
     {
         nombre: "Trompetas y Fliscornos",
-        mostrarInstrumento: false,
+        mostrarInstrumento: true,
         miembros: [
             {
                 nombre: "Álvaro Vega",
@@ -126,12 +136,12 @@ export const secciones: Seccion[] = [
             {
                 nombre: "Rocío Pichardo",
                 instrumento: "Trompeta",
-                foto: "/miembros/trompetas/rocio.png",
+                foto: "/miembros/trompetas/rociop.png",
             },
             
             {
                 nombre: "Pepe López",
-                instrumento: "Trompeta / Corneta",
+                instrumento: "Trompeta",
                 foto: "/miembros/trompetas/pepe.png",
             },
             {
@@ -209,12 +219,12 @@ export const secciones: Seccion[] = [
             {
                 nombre: "Salomé Mota",
                 instrumento: "Alto",
-                foto: "/miembros/usuario.jpg",
+                foto: "/miembros/saxos/salome.png",
             },
             {
                 nombre: "Lola Coronel",
                 instrumento: "Alto",
-                foto: "/miembros/usuario.jpg",
+                foto: "/miembros/saxos/lola.png",
             },
         ],
     },
@@ -300,7 +310,7 @@ export const secciones: Seccion[] = [
                 foto: "/miembros/percu/zubi.png",
             },
             {
-                nombre: "Jose Manuel Pérez",
+                nombre: "Jose Manuel Carrasco",
                 instrumento: "",
                 foto: "/miembros/percu/josemanuel.png",
             },
@@ -333,7 +343,7 @@ export const secciones: Seccion[] = [
             {
                 nombre: "J. Ramón Pulido",
                 instrumento: "Timbal",
-                foto: "/miembros/usuario.jpg",
+                foto: "/miembros/tambores/serra.png",
             },
             {
                 nombre: "Marco Antonio Ramos",
