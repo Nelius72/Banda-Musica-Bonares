@@ -10,11 +10,11 @@ export type Evento = {
 export const eventos : Evento[] = [
  
   {
-    title: "Musical Disney",
+    title: "Donde los Sueños Cantan",
     date: "2026-06-06",
-    location: "Bonares",
-    hour: "Por determinar",
-    description: "Concierto temático con los alumnos de la Escuela de Música",
+    location: "Bonares / Teatro Cine Colón",
+    hour: "Dos pases: 19:00 y 20:30",
+    description: "Musical temático Disney con los alumnos de la Escuela de Música",
   },
   {
     title: "Corpus Christi",
