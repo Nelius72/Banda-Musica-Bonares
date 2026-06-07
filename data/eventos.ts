@@ -20,7 +20,7 @@ export const eventos : Evento[] = [
     title: "Corpus Christi",
     date: "2026-06-07",
     location: "Bonares / Plaza de la Constitución",
-    hour: "Por determinar",
+    hour: "21:00",
     description: "Tradicional procesión por el pueblo decorado con juncia",
   },
   {
