@@ -189,7 +189,7 @@ export const secciones: Seccion[] = [
             {
                 nombre: "Diego Coronel",
                 instrumento: "Alto",
-                foto: "/miembros/presidente.png",
+                foto: "/miembros/junta/presidente.png",
             },
             {
                 nombre: "Ángela León",
