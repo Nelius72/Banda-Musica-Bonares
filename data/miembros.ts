@@ -283,11 +283,7 @@ export const secciones: Seccion[] = [
                 instrumento: "Tuba",
                 foto: "/miembros/metales/luis.png",
             },
-            {
-                nombre: "Ezequiel Márquez",
-                instrumento: "Tuba",
-                foto: "/miembros/metales/zequi.png",
-            },
+            
         ],
     },
     {
