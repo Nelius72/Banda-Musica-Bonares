@@ -9,40 +9,20 @@ export type Evento = {
 
 export const eventos : Evento[] = [
  
-  {
-    title: "Donde los Sueños Cantan",
-    date: "2026-06-06",
-    location: "Bonares / Teatro Cine Colón",
-    hour: "Dos pases: 19:00 y 20:30",
-    description: "Musical temático Disney con los alumnos de la Escuela de Música",
-  },
-  {
-    title: "Corpus Christi",
-    date: "2026-06-07",
-    location: "Bonares / Plaza de la Constitución",
-    hour: "11:00",
-    description: "Tradicional procesión por el pueblo decorado con juncia",
-  },
-  {
-    title: "Concierto Corpus Christi",
-    date: "2026-06-07",
-    location: "Bonares / Plaza de la Constitución",
-    hour: "21:00",
-    description: "Concierto vespertino de Corpus Christi.",
-  },
+  
   {
     title: "Carnaval Sinfónico",
     date: "2026-07-26",
     location: "Bonares / Plaza de España",
     hour: "22:00",
-    description: "Concierto de Carnaval con repertorio festivo y animado.",
+    description: "Revive la magia del Carnaval bajo una perspectiva musical impresionante.",
   },
   {
-    title: "Concierto de Verano a definir",
+    title: "José Luís Pérez-Vera",
     date: "2026-08-30",
     location: "Bonares / Plaza de España",
     hour: "22:00",
-    description: "Contenido a definir",
+    description: "La música y las raíces andaluzas se dan la mano en una cita inolvidable",
   },
   {
     title: "Semana Cultural Andaluza",
